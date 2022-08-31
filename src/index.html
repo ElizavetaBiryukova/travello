@@ -4,19 +4,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Website for finding restaurants</title>
+  <title>The travel guide app "TRAVELLO"</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page__body">
   <header class="page-header">
-    
+    <div class="page-header__wrapper">
+      <div class="page-header__contacts">
+        <ul class="page-header__contacts-list contacts-list">
+          <li class="contacts-list__link contacts-list__link--email">info@yourcommpany.com</li>
+          <li class="contacts-list__link contacts-list__link--phone">+7000000000000</li>
+        </ul>
+        <ul class="page-header__social-list social-list">
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--facebook"></a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--twitter"></a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--pinterest"></a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--instagram"></a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--youtube"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-header__menu">
+        <a class="page-header__logo">TRAVELLO</a>
+        <div class="page-header__burger"></div>
+        <div class="page-header__nav main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" aria-label="home">
+                home
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" aria-label="about">
+                about
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" aria-label="blog">
+                blog
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" aria-label="account">
+                account
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" aria-label="login">
+                login
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </header>
   <main class="page-main">
-    <img src="img/river.jpg">
+    <h1 class="visually-hidden">The travel guide app</h1>
+    <section class="title">
+      <h2 class="visually-hidden">Travello</h2>
+      <div class="title__wrapper">
+        <p class="title__description">The travel guide app</p>
+        <p class="title__heading">Travello</p>
+      </div>
+    </section>
+    <section class="search">
+      <h2 class="visually-hidden">Search travel booking</h2>
+      <div class="search__wrapper">
+        <p class="search__description">Travel booking just a click away</p>
+        <form class="search__search-line">
+        <input type="text" class="search__input" placeholder="Where do you want go?">
+        <button class="search__button" type="submit"></button>
+      </form>
+      </div>
+    </section>
+    <section class="advantages">
+      <h2 class="visually-hidden">Application advantages</h2>
+      <ul class="advantages__list">
+        <li class="advantages__item">
+          <p class="advantages__title">100+ Options</p>
+          <p class="advantages__description">At in proin consequat ut cursus venenatis sapien.</p>
+        </li>
+        <li class="advantages__item">
+          <p class="advantages__title">Good quality</p>
+          <p class="advantages__description">At in proin consequat ut cursus venenatis sapien.</p>
+        </li>
+        <li class="advantages__item">
+          <p class="advantages__title">Easy interface</p>
+          <p class="advantages__description">At in proin consequat ut cursus venenatis sapien.</p>
+        </li>
+        <li class="advantages__item">
+          <p class="advantages__title">Tracking code</p>
+          <p class="advantages__description">At in proin consequat ut cursus venenatis sapien.</p>
+        </li>
+      </ul>
+    </section>
   </main>
   <footer class="page-footer">
-    
+
   </footer>
   <script src="js/app.min.js"></script>
 </body>
