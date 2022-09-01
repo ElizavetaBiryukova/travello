@@ -1,4 +1,7 @@
-.page__body {
-    background-color: pink;
-    font-family: "Poppins", "Arial", sans-serif;
-}
+@import "global/fonts.scss";
+@import "global/variables.scss";
+@import "support/visualy-hidden.scss";
+
+//blocks
+@import "blocks/page-body.scss";
+@import "blocks/page-header.scss";

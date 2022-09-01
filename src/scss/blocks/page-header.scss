@@ -1,0 +1,34 @@
+.page-header__contacts {
+display: none;
+}
+
+.page-header__nav {
+    display: none;
+}
+
+.page-header__logo {
+    font-family: "Righteous", "Arial", sans-serif;
+    font-size: 36px;
+    line-height: 44.7px;
+}
+
+.page-header__menu {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-header__burger {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+.page-header__bar {
+    width: 20.54px;
+    height: 3.12px;
+    background-color: $white;
+    margin: 4px 0;
+}
