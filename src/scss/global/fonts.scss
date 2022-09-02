@@ -1,6 +1,13 @@
 @font-face {
 	font-family: Arsenal;
 	font-display: swap;
+	src: url("../fonts/Arsenal-Bold.woff2") format("woff2"), url("../fonts/Arsenal-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+};
+@font-face {
+	font-family: Arsenal;
+	font-display: swap;
 	src: url("../fonts/Arsenal-BoldItalic.woff2") format("woff2"), url("../fonts/Arsenal-BoldItalic.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
@@ -13,24 +20,17 @@
 	font-style: normal;
 };
 @font-face {
+	font-family: DMSerifDisplay;
+	font-display: swap;
+	src: url("../fonts/DMSerifDisplay-Regular.woff2") format("woff2"), url("../fonts/DMSerifDisplay-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+};
+@font-face {
 	font-family: Arsenal;
 	font-display: swap;
 	src: url("../fonts/Arsenal-Regular.woff2") format("woff2"), url("../fonts/Arsenal-Regular.woff") format("woff");
 	font-weight: 400;
-	font-style: normal;
-};
-@font-face {
-	font-family: DMSerifDisplay;
-	font-display: swap;
-	src: url("../fonts/DMSerifDisplay-Italic.woff2") format("woff2"), url("../fonts/DMSerifDisplay-Italic.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
-};
-@font-face {
-	font-family: Arsenal;
-	font-display: swap;
-	src: url("../fonts/Arsenal-Bold.woff2") format("woff2"), url("../fonts/Arsenal-Bold.woff") format("woff");
-	font-weight: 700;
 	font-style: normal;
 };
 @font-face {
@@ -43,14 +43,21 @@
 @font-face {
 	font-family: DMSerifDisplay;
 	font-display: swap;
-	src: url("../fonts/DMSerifDisplay-Regular.woff2") format("woff2"), url("../fonts/DMSerifDisplay-Regular.woff") format("woff");
+	src: url("../fonts/DMSerifDisplay-Italic.woff2") format("woff2"), url("../fonts/DMSerifDisplay-Italic.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 };
 @font-face {
 	font-family: Roboto;
 	font-display: swap;
-	src: url("../fonts/Roboto-BoldItalic.woff2") format("woff2"), url("../fonts/Roboto-BoldItalic.woff") format("woff");
+	src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+};
+@font-face {
+	font-family: OpenSans;
+	font-display: swap;
+	src: url("../fonts/OpenSans-Italic.woff2") format("woff2"), url("../fonts/OpenSans-Italic.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 };
@@ -71,14 +78,14 @@
 @font-face {
 	font-family: Roboto;
 	font-display: swap;
-	src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff");
-	font-weight: 700;
+	src: url("../fonts/Roboto-Italic.woff2") format("woff2"), url("../fonts/Roboto-Italic.woff") format("woff");
+	font-weight: 400;
 	font-style: normal;
 };
 @font-face {
 	font-family: Roboto;
 	font-display: swap;
-	src: url("../fonts/Roboto-Italic.woff2") format("woff2"), url("../fonts/Roboto-Italic.woff") format("woff");
+	src: url("../fonts/Roboto-BoldItalic.woff2") format("woff2"), url("../fonts/Roboto-BoldItalic.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 };

@@ -1,0 +1,24 @@
+.advantages__list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0px 0px 30px 0px;
+}
+
+.advantages__item {
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.advantages__title {
+    font-family: "Arsenal";
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 2px;
+    text-transform: capitalize;
+}
+
+.advantages__description {
+    font-size: 16px;
+    margin-top: 2px;
+}

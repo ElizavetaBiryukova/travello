@@ -1,8 +1,14 @@
-.page__body {
+.page {
+    height: 100%;
     font-family: $font-family-base;
     color: $white;
     font-size: $font-size-base;
     background-color: $black;
     font-weight: 400;
     // background-image: url('../../img/Rectangle 3.png');
+}
+
+.page__body {
+    min-height: 100%;
+    margin: 15;
 }

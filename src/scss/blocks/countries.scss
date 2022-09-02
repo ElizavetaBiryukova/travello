@@ -1,0 +1,30 @@
+.countries__list {
+    list-style-type: none;
+    padding-left: 0px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 25px;
+    width:max-content;
+}
+
+.countries__button {
+    background-color: $black;
+    box-sizing: border-box;
+    border: 1px solid $black;
+    width: max-content;
+    height: 28px;
+    border-radius: 8px;
+    font-weight: 700;
+    color: $white;
+}
+
+.countries__button--active {
+    background-color: rgba(242, 201, 76, 1);
+    box-sizing: border-box;
+    border: 1px solid rgba(242, 201, 76, 1);
+    width: max-content;
+    height: 28px;
+    border-radius: 8px;
+    font-weight: 700;
+    color: $black;
+}

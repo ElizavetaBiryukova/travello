@@ -1,0 +1,35 @@
+.search__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.search__description {
+    font-style: italic;
+}
+
+.search__search-line {
+    display: flex;
+
+}
+
+.search__button {
+    width: 60px;
+    height: 60px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: $black;
+    border: $black;
+}
+
+.search__input {
+    width: 240px;
+    height: 60px;
+    box-sizing: border-box;
+    border-radius: 10px 0px 0px 10px;
+    font-size: 19px;
+}
+
+.search__input::placeholder {
+    padding-left: 20px;
+}
