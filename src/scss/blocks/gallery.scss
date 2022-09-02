@@ -1,4 +1,21 @@
 .gallery__wrapper {
     display: flex;
     flex-direction: column;
+    padding-bottom: 40px;
+}
+
+.gallery__view-all {
+    margin: auto;
+}
+
+.gallery__button {
+    font-family: "Roboto";
+    font-size: 15px;
+    font-weight: 900;
+    background-color: $black;
+    box-sizing:border-box;
+    border: 2px solid $white;
+    color: $white;
+    width: 151px;
+    height: 45px;
 }

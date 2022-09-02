@@ -1,0 +1,46 @@
+.hotels {
+    display: grid;
+    gap: 20px;
+    margin: auto;
+}
+
+.hotels__item {
+    width: min-content;
+    border-radius: 10px;
+    background-color: $black;
+}
+
+.hotels__name {
+    font-family: "Arsenal";
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.hotels__price {
+    font-family: "DMSerifDisplay";
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    line-height: 25px;
+}
+
+.hotels__old-price {
+    font-style: italic;
+    font-size: 22px;
+    text-decoration: line-through;
+    color: rgba(177, 180, 185, 1);
+    // line-height: 33px;
+    margin: 0px;
+}
+
+
+.hotels__new-price {
+    font-size: 48px;
+    // line-height: 0px;
+    margin: 0px;
+}
+
+.hotels__price-text {
+    // line-height: 46px;
+    margin: 0px;
+}
