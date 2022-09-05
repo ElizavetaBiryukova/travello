@@ -1,6 +1,6 @@
 .hotels {
     display: grid;
-    gap: 20px;
+    gap: 30px;
     margin: auto;
 }
 
@@ -8,12 +8,58 @@
     width: min-content;
     border-radius: 10px;
     background-color: $black;
+    position: relative;
 }
+
+.hotels__like {
+    position: absolute;
+    right: 26px;
+    top: 13px;
+}
+
+.hotels__heart-icon {
+    display: block;
+    width: 24px;
+    height: 23px;
+    border: none;
+    background-color: transparent;
+    background-image: url("../img/icon-heart.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.hotels__info {
+    padding: 24px 15px;
+}
+
+.hotels__rating {
+    display: inline-block;
+    cursor: pointer;
+    padding-bottom: 20px;
+}
+
+.hotels__star {
+    padding: 0;
+    font-size: 25px;
+    line-height: 1;
+    color: rgba(137, 145, 175, 1);
+}
+
+.hotels__star::before {
+    content: '★';
+}
+
+.hotels__star--active::before {
+    color: #FFC22B;
+}
+
 
 .hotels__name {
     font-family: "Arsenal";
     font-weight: 700;
     font-size: 24px;
+    margin-bottom: 5px;
 }
 
 .hotels__price {
@@ -22,6 +68,7 @@
     justify-content: flex-end;
     align-items: flex-end;
     line-height: 25px;
+    padding-bottom: 20px;
 }
 
 .hotels__old-price {
@@ -29,18 +76,39 @@
     font-size: 22px;
     text-decoration: line-through;
     color: rgba(177, 180, 185, 1);
-    // line-height: 33px;
     margin: 0px;
 }
 
 
 .hotels__new-price {
     font-size: 48px;
-    // line-height: 0px;
+    line-height: 43px;
     margin: 0px;
 }
 
 .hotels__price-text {
-    // line-height: 46px;
     margin: 0px;
+}
+
+.hotels__description {
+    font-size: 16px;
+    color: rgba(137, 145, 175, 1);
+    line-height: 25px;
+    padding-bottom: 40px;
+}
+
+.hotels__button {
+    height: 82px;
+    width: 290px;
+    border-radius: 8px;
+    background: rgba(0, 89, 172, 1);
+    color: $white;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 89, 172, 1);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0.2em;
+    text-align: center;
+    text-transform: uppercase;
 }

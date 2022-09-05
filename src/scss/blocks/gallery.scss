@@ -1,7 +1,7 @@
 .gallery__wrapper {
     display: flex;
     flex-direction: column;
-    padding-bottom: 40px;
+    padding-bottom: 70px;
 }
 
 .gallery__view-all {
@@ -18,4 +18,5 @@
     color: $white;
     width: 151px;
     height: 45px;
+    text-transform: uppercase;
 }
