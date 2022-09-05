@@ -1,0 +1,27 @@
+.contacts__name {
+    font-family: 'Righteous';
+    font-size: 48px;
+    line-height: 86px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contacts__email {
+    font-family: 'Roboto';
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    color: rgba(137, 145, 175, 1);
+    text-decoration: underline;
+    padding-bottom: 10px;
+
+}
+
+.contacts__adress {
+    font-family: 'Roboto';
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    color: rgba(137, 145, 175, 1);
+
+}
