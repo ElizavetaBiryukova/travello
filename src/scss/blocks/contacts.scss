@@ -1,3 +1,12 @@
+.contacts__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgba(0, 89, 172, 0.4);
+    ;
+}
+
 .contacts__name {
     font-family: 'Righteous';
     font-size: 48px;
