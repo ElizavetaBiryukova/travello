@@ -2,6 +2,14 @@
     display: grid;
     gap: 30px;
     margin: auto;
+    padding-bottom: 40px;
+    @media (min-width: $tablet-width) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: $desktop-width) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
 
 .hotels__item {

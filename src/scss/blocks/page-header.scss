@@ -1,9 +1,22 @@
 .page-header__contacts {
-display: none;
+    display: none;
+
+    @media (min-width: $desktop-width) {
+        display: flex;
+        justify-content: space-between;
+        background-color: $black;
+        width: 100%;
+        margin: -15px -15px 0px -15px;
+        padding-right: 50px;
+    }
 }
 
 .page-header__nav {
     display: none;
+
+    @media (min-width: $desktop-width) {
+        display: block;
+    }
 }
 
 .page-header__logo {
@@ -24,6 +37,10 @@ display: none;
     flex-direction: column;
     align-items: flex-end;
     cursor: pointer;
+
+    @media (min-width: $desktop-width) {
+        display: none;
+    }
 }
 
 .page-header__bar {

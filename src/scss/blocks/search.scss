@@ -7,6 +7,13 @@
 
 .search__description {
     font-style: italic;
+
+    @media (min-width: $desktop-width) {
+        font-size: 18px;
+        font-style: italic;
+        line-height: 25px;
+        letter-spacing: 0.1em;
+    }
 }
 
 .search__search-line {
@@ -20,6 +27,11 @@
     border-radius: 0px 10px 10px 0px;
     background-color: $black;
     border: $black;
+
+    @media (min-width: $desktop-width) {
+        height: 76px;
+        width: 109px;
+    }
 }
 
 .search__input {
@@ -28,6 +40,11 @@
     box-sizing: border-box;
     border-radius: 10px 0px 0px 10px;
     font-size: 19px;
+
+    @media (min-width: $desktop-width) {
+        width: 500px;
+        height: 76px;
+    }
 }
 
 .search__input::placeholder {

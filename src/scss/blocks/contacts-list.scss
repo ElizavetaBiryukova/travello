@@ -1,0 +1,37 @@
+@media (min-width: $desktop-width) {
+    .contacts-list {
+        display: flex;
+        gap: 50px;
+        font-family: 'Roboto';
+        font-size: 18px;
+        line-height: 27px;
+        color: rgba(255, 255, 255, 1);
+        list-style-type: none;
+        text-decoration-line: underline;
+        margin: 10px 0px;
+    }
+
+    .contacts-list__link {
+        position: relative;
+    }
+
+    .contacts-list__link--email::before {
+        position: absolute;
+        content: '';
+        background: url(../../img/envelope.svg);
+        width: 24px;
+        height: 24px;
+        top: 0px;
+        right: 214px;
+    }
+
+    .contacts-list__link--phone::before {
+        position: absolute;
+        content: '';
+        background: url(../../img/headphones.svg);
+        width: 24px;
+        height: 24px;
+        top: 0px;
+        right: 148px;
+    }
+}

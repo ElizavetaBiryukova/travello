@@ -3,11 +3,22 @@
     flex-direction: column;
     list-style-type: none;
     padding: 0px 0px 30px 0px;
+
+    @media (min-width: $desktop-width) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px 0px 170px 0px;
+    }
 }
 
 .advantages__item {
     padding-bottom: 30px;
     text-align: center;
+
+    @media (min-width: $desktop-width) {
+        text-align: left;
+        max-width: 275px;
+    }
 }
 
 .advantages__title {

@@ -4,6 +4,17 @@
     background-repeat: no-repeat;
     background-position: center top;
     padding-bottom: 40px;
+
+    @media (min-width: $tablet-width) {
+        max-width: 900px;
+        margin: auto;
+    }
+
+    @media (min-width: $desktop-width) {
+        background-position: center left;
+        padding-left: 140px;
+        padding-bottom: 140px;
+    }
 }
 
 .testimonials__text {
