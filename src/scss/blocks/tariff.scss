@@ -7,12 +7,16 @@
 }
 
 .tariff__item {
-    width: min-content;
+    // width: min-content;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
     background-color: $black;
     border: 1px solid $black;
     box-sizing: border-box;
     border-radius: 10px;
-    padding: 20px 20px;
+    // margin: 20px;
+    padding: 20px;
 }
 
 .tariff__price {
@@ -46,7 +50,6 @@
     font-size: 16px;
     line-height: 25px;
     color: rgba(137, 145, 175, 1);
-    width: 309px;
     border-bottom: 2px solid rgba(235, 236, 237, 0.2);
     padding-bottom: 20px;
 }
@@ -55,9 +58,9 @@
     font-size: 16px;
     line-height: 25px;
     color: rgba(137, 145, 175, 1);
-    padding-top: 20px;
     list-style-type: none;
-    padding-bottom: 100px;
+    padding: 20px 0px 100px 40px;
+    width: max-content;
 }
 
 .tariff__option {
@@ -71,7 +74,7 @@
     background: no-repeat, url(../../img/check.svg);
     width: 18px;
     height: 15px;
-    right: 286px;
+    right: 230px;
 }
 
 .tariff__button-wrapper {
