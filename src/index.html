@@ -67,13 +67,19 @@
       <path
         d="M17.895 3.48828C17.9653 4.75391 18.0005 6.00781 18.0005 7.25C18.0005 8.49219 17.9653 9.74609 17.895 11.0117C17.895 11.8086 17.6372 12.4883 17.1216 13.0508C16.6294 13.5898 16.02 13.8594 15.2935 13.8594C13.4888 13.9531 11.3911 14 9.00049 14C6.60986 14 4.51221 13.9531 2.70752 13.8594C1.98096 13.8594 1.35986 13.5898 0.844238 13.0508C0.352051 12.4883 0.105957 11.8086 0.105957 11.0117C0.0356445 9.74609 0.000488281 8.49219 0.000488281 7.25C0.000488281 6.42969 0.0473633 5.17578 0.141113 3.48828C0.141113 2.69141 0.387207 2.02344 0.879395 1.48438C1.37158 0.921875 1.98096 0.640625 2.70752 0.640625C4.41846 0.546875 6.41064 0.5 8.68408 0.5H9.00049H9.31689C11.5903 0.5 13.5825 0.546875 15.2935 0.640625C16.02 0.640625 16.6294 0.921875 17.1216 1.48438C17.6372 2.02344 17.895 2.69141 17.895 3.48828ZM7.27783 10.6953L12.3755 7.25L7.27783 3.76953V10.6953Z" />
     </symbol>
+
+    <symbol viewBox="0 0 24 24" id="heart">
+      <path
+        d="M11.928 4.86044C12.8966 2.5646 15.1094 0.960441 17.6832 0.960441C21.1502 0.960441 23.6472 3.92636 23.9611 7.46108C23.9611 7.46108 24.1306 8.33852 23.7576 9.9182C23.2498 12.0696 22.056 13.9809 20.4466 15.4396L11.928 23.04L3.55296 15.4392C1.94352 13.9809 0.749761 12.0691 0.241921 9.91772C-0.131039 8.33804 0.038401 7.4606 0.038401 7.4606C0.352321 3.92588 2.84928 0.959961 6.31632 0.959961C8.89056 0.959961 10.9594 2.5646 11.928 4.86044Z" />
+    </symbol>
   </svg>
   <header class="page-header">
     <div class="page-header__wrapper">
       <div class="page-header__contacts">
         <ul class="page-header__contacts-list contacts-list">
           <li class="contacts-list__item contacts-list__item--email">
-            <a aria-label="email" href="mailto:info@yourcommpany.com" class="contacts-list__link">info@yourcommpany.com<a/>
+            <a aria-label="email" href="mailto:info@yourcommpany.com"
+              class="contacts-list__link">info@yourcommpany.com<a />
           </li>
           <li class="contacts-list__item contacts-list__item--phone">
             <a aria-label="telephone number" href="tel:+7000000000000" class="contacts-list__link">+7000000000000</a>
@@ -81,7 +87,8 @@
         </ul>
         <ul class="page-header__social-list social-list">
           <li class="social-list__item">
-            <a aria-label="facebook" class="social-list__link social-list__link--facebook" href="https://www.facebook.com/TemplatesJungle">
+            <a aria-label="facebook" class="social-list__link social-list__link--facebook"
+              href="https://www.facebook.com/TemplatesJungle">
               <svg class="social-list__icon" width="7" height="14">
                 <use xlink:href="#facebook"></use>
               </svg>
@@ -102,7 +109,8 @@
             </a>
           </li>
           <li class="social-list__item">
-            <a aria-label="instagram" class="social-list__link social-list__link--instagram" href="https://www.instagram.com/templatesjungle.design">
+            <a aria-label="instagram" class="social-list__link social-list__link--instagram"
+              href="https://www.instagram.com/templatesjungle.design">
               <svg class="social-list__icon" width="15" height="16">
                 <use xlink:href="#instagram"></use>
               </svg>
@@ -124,7 +132,7 @@
           <div class="page-header__bar page-header__bar--2"></div>
           <div class="page-header__bar page-header__bar--3"></div>
         </div>
-        <div class="page-header__nav main-nav">
+        <div class="page-header__nav main-nav <!-- main-nav--open-->">
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link" aria-label="home">
@@ -229,7 +237,8 @@
         <div class="gallery__countries">
           <ul class="gallery__countries-list countries__list">
             <li class="countries__item">
-              <button aria-label="Country switch button" type="button" class="countries__button countries__button--active">Singapore</button>
+              <button aria-label="Country switch button" type="button"
+                class="countries__button countries__button--active">Singapore</button>
             </li>
             <li class="countries__item">
               <button aria-label="Country switch button" type="button" class="countries__button">China</button>
@@ -252,7 +261,11 @@
           <article class="hotels__item">
             <h3 class="visually-hidden">Hotel description</h3>
             <div class="hotels__like">
-              <button class="hotels__heart-icon" aria-label="Like"></button>
+              <button class="hotels__heart-icon" aria-label="Like">
+                <svg class="hotels__icon" width="24" height="24">
+                  <use xlink:href="#heart"></use>
+                </svg>
+              </button>
             </div>
             <img src="img/Hotel.png" alt="hotel" class="hotels__img">
             <div class="hotels__info">
@@ -279,7 +292,11 @@
           <article class="hotels__item">
             <h3 class="visually-hidden">Hotel description</h3>
             <div class="hotels__like">
-              <button class="hotels__heart-icon" aria-label="Like"></button>
+              <button class="hotels__heart-icon" aria-label="Like">
+                <svg class="hotels__icon" width="24" height="24">
+                  <use xlink:href="#heart"></use>
+                </svg>
+              </button>
             </div>
             <img src="img/Hotel1.png" alt="hotel" class="hotels__img">
             <div class="hotels__info">
@@ -306,7 +323,11 @@
           <article class="hotels__item">
             <h3 class="visually-hidden">Hotel description</h3>
             <div class="hotels__like">
-              <button class="hotels__heart-icon" aria-label="Like"></button>
+              <button class="hotels__heart-icon" aria-label="Like">
+                <svg class="hotels__icon" width="24" height="24">
+                  <use xlink:href="#heart"></use>
+                </svg>
+              </button>
             </div>
             <img src="img/Hotel2.png" alt="hotel" class="hotels__img">
             <div class="hotels__info">
@@ -333,7 +354,11 @@
           <article class="hotels__item">
             <h3 class="visually-hidden">Hotel description</h3>
             <div class="hotels__like">
-              <button class="hotels__heart-icon" aria-label="Like"></button>
+              <button class="hotels__heart-icon" aria-label="Like">
+                <svg class="hotels__icon" width="24" height="24">
+                  <use xlink:href="#heart"></use>
+                </svg>
+              </button>
             </div>
             <img src="img/Hotel3.png" alt="hotel" class="hotels__img">
             <div class="hotels__info">
@@ -470,7 +495,8 @@
       </h2>
       <div class="contacts__wrapper">
         <div class="contacts__name">Travello.</div>
-        <div class="contacts__email"><a aria-label="email" href="mailto:hello@jungle.com" class="contacts__link">hello@templatesjungle.com</a></div>
+        <div class="contacts__email"><a aria-label="email" href="mailto:hello@jungle.com"
+            class="contacts__link">hello@templatesjungle.com</a></div>
         <div class="contacts__adress">15Th Street Avenue, New York, USA</div>
         <ul class="contacts__social social-list">
           <li class="social-list__item">
@@ -488,7 +514,7 @@
             </a>
           </li>
           <li class="social-list__item">
-            <a aria-label="printerest" class="social-list__link social-list__link--printerest" >
+            <a aria-label="printerest" class="social-list__link social-list__link--printerest">
               <svg class="social-list__icon" width="16" height="17">
                 <use xlink:href="#printerest"></use>
               </svg>

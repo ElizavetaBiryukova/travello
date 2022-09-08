@@ -3,6 +3,7 @@
     gap: 30px;
     margin: auto;
     padding-bottom: 40px;
+
     @media (min-width: $tablet-width) {
         grid-template-columns: 1fr 1fr;
     }
@@ -37,11 +38,19 @@
     height: 23px;
     border: none;
     background-color: transparent;
-    background-image: url("../img/icon-heart.svg");
-    background-repeat: no-repeat;
     background-size: contain;
     cursor: pointer;
 }
+
+.hotels__icon {
+    fill: $white;
+}
+
+.hotels__icon:focus,
+.hotels__icon:hover {
+    fill: rgb(217, 0, 0);
+}
+
 
 .hotels__info {
     padding: 24px 15px;

@@ -11,14 +11,6 @@
     }
 }
 
-.page-header__nav {
-    display: none;
-
-    @media (min-width: $desktop-width) {
-        display: block;
-    }
-}
-
 .page-header__logo {
     font-family: "Righteous", "Arial", sans-serif;
     font-size: 36px;
@@ -27,7 +19,7 @@
 
 .page-header__logo:focus,
 .page-header__logo:hover {
-    color: #8991AF;
+    color: $black;
 }
 
 .page-header__menu {
@@ -53,4 +45,9 @@
     height: 3.12px;
     background-color: $white;
     margin: 4px 0;
+}
+
+.page-header__burger:focus .page-header__bar,
+.page-header__burger:hover .page-header__bar{
+    background-color: $black;
 }
