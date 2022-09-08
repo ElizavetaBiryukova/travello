@@ -64,6 +64,11 @@
     background-color: $white;
 }
 
+.testimonials__button:focus,
+.testimonials__button:hover {
+    border: 1px solid #0a14c6;
+}
+
 .testimonials__button--active {
     background-color: #F2C94C;
     border: 1px solid #F2C94C;

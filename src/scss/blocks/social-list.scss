@@ -4,3 +4,12 @@
     padding-left: 0px;
     list-style-type: none;
 }
+
+
+.social-list__icon {
+    fill: #8991AF;
+}
+.social-list__icon:focus,
+.social-list__icon:hover {
+    fill: $white;
+}

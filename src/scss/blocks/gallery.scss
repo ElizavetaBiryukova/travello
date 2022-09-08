@@ -21,3 +21,8 @@
     height: 45px;
     text-transform: uppercase;
 }
+
+.gallery__button:focus,
+.gallery__button:hover {
+    opacity: .7;
+}

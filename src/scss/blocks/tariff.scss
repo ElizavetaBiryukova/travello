@@ -22,6 +22,11 @@
     padding: 20px;
 }
 
+.tariff__item:focus,
+.tariff__item:hover {
+    opacity: .8;
+}
+
 .tariff__price {
     display: flex;
     align-items: flex-end;
@@ -95,4 +100,9 @@
     border-radius: 8px;
     padding: 12px 47px;
     margin: 0 auto;
+}
+
+.teriff__button:focus,
+.teriff__button:hover {
+    background-color: rgb(55, 150, 240);
 }

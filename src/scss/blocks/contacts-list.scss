@@ -7,15 +7,25 @@
         line-height: 27px;
         color: rgba(255, 255, 255, 1);
         list-style-type: none;
-        text-decoration-line: underline;
+        text-decoration: underline;
         margin: 10px 0px;
     }
 
-    .contacts-list__link {
+    .contacts-list__item {
         position: relative;
     }
 
-    .contacts-list__link--email::before {
+    .contacts-list__link {
+        color: rgba(255, 255, 255, 1);
+        text-decoration: none;
+    }
+
+    .contacts-list__link:focus,
+    .contacts-list__link:hover {
+        color: #8991AF;
+    }
+
+    .contacts-list__item--email::before {
         position: absolute;
         content: '';
         background: url(../../img/envelope.svg);
@@ -25,7 +35,7 @@
         right: 214px;
     }
 
-    .contacts-list__link--phone::before {
+    .contacts-list__item--phone::before {
         position: absolute;
         content: '';
         background: url(../../img/headphones.svg);
