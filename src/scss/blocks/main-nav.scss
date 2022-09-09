@@ -1,7 +1,6 @@
-
 .main-nav {
     display: none;
-    
+
     @media (min-width: $desktop-width) {
         display: block;
     }
@@ -22,13 +21,22 @@
     left: 0px;
     z-index: 10;
     padding: 90px 30px;
-    font-family: "Arsenal";
-    font-size: 34px;
     background-color: $black;
     background-image: url(../../img/footer-bg.png);
     background-position: center;
     margin: 0px;
     text-align: center;
+}
+
+.main-nav--open .main-nav__link {
+    font-family: "Arsenal";
+    font-size: 34px;
+}
+
+.main-nav__link {
+    text-decoration: none;
+    color: $white;
+
 }
 
 .main-nav__list {
@@ -41,13 +49,13 @@
     line-height: 20px;
 }
 
-.main-nav__item:focus,
-.main-nav__item:hover {
+.main-nav__link:focus,
+.main-nav__link:hover {
     color: $black;
 }
 
-.main-nav--open .main-nav__item:focus,
-.main-nav--open .main-nav__item:hover {
+.main-nav--open .main-nav__link:focus,
+.main-nav--open .main-nav__link:hover {
     color: rgb(34, 112, 197);
 }
 
@@ -57,8 +65,5 @@
         gap: 30px;
         text-align: center;
 
-
     }
-
-
 }

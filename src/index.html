@@ -79,7 +79,7 @@
         <ul class="page-header__contacts-list contacts-list">
           <li class="contacts-list__item contacts-list__item--email">
             <a aria-label="email" href="mailto:info@yourcommpany.com"
-              class="contacts-list__link">info@yourcommpany.com<a />
+              class="contacts-list__link">info@yourcommpany.com</a>
           </li>
           <li class="contacts-list__item contacts-list__item--phone">
             <a aria-label="telephone number" href="tel:+7000000000000" class="contacts-list__link">+7000000000000</a>
@@ -126,7 +126,7 @@
         </ul>
       </div>
       <div class="page-header__menu">
-        <a aria-label="Logotype, home page" class="page-header__logo">TRAVELLO.</a>
+        <a class="page-header__logo" href="#" aria-label="Logotype, home page">TRAVELLO.</a>
         <div class="page-header__burger">
           <div class="page-header__bar page-header__bar--1"></div>
           <div class="page-header__bar page-header__bar--2"></div>
@@ -135,27 +135,27 @@
         <div class="page-header__nav main-nav">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a class="main-nav__link" aria-label="home">
+              <a class="main-nav__link" href="#" aria-label="home">
                 home
               </a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" aria-label="about">
+              <a class="main-nav__link" href="#" aria-label="about">
                 about
               </a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" aria-label="blog">
+              <a class="main-nav__link" href="#" aria-label="blog">
                 blog
               </a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" aria-label="account">
+              <a class="main-nav__link" href="#" aria-label="account">
                 account
               </a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" aria-label="login">
+              <a class="main-nav__link" href="#" aria-label="login">
                 login
               </a>
             </li>
@@ -179,7 +179,8 @@
       <div class="search__wrapper">
         <p class="search__description">Travel booking just a click away</p>
         <form class="search__search-line">
-          <input aria-label="Enter country" type="text" class="search__input" placeholder="Where do you want go?">
+          <input aria-label="Enter country" type="text" class="search__input" placeholder="Where do you want go?"
+            required>
           <button aria-label="Сountry search button" class="search__button" type="submit">
             <svg class="search__button-icon" width="19" height="19">
               <use xlink:href="#glass"></use>
@@ -391,14 +392,32 @@
     <section class="testimonials">
       <h2 class="visually-hidden">Testimonials</h2>
       <div class="testimonials__wrapper">
-        <div class="testimonials__slider">
+        <div class="testimonials__slider testimonials__slider--active">
           <p class="testimonials__text">Richard is so good at what he does. Excellent communicatuon skills made things
             much simple and faster. Will continue working with him.</p>
           <div class="testimonials__author">
-            <p class="testimonials__author-name">Dr. Steve Watson,</p>
+            <p class="testimonials__author-name">Dr. Steve Watson, &nbsp</p>
             <p class="testimonials__author-company">Greenland Studio in.</p>
           </div>
         </div>
+        <div class="testimonials__slider">
+          <p class="testimonials__text">Leo is so good at what he does. Excellent communicatuon skills made things
+            much simple and faster. Will continue working with him.</p>
+          <div class="testimonials__author">
+            <p class="testimonials__author-name">Marina</p>
+            <p class="testimonials__author-company">Bueno Studio in.</p>
+          </div>
+        </div>
+
+        <div class="testimonials__slider">
+          <p class="testimonials__text">John is so good at what he does. Excellent communicatuon skills made things
+            much simple and faster. Will continue working with him.</p>
+          <div class="testimonials__author">
+            <p class="testimonials__author-name">Dr. Alex Stewart,</p>
+            <p class="testimonials__author-company">Sun Studio in.</p>
+          </div>
+        </div>
+
         <div class="testimonials__control">
           <button class="testimonials__button testimonials__button--active" type="button"
             aria-label="First slide"></button>

@@ -52,7 +52,6 @@
     width: 86px;
     display: flex;
     gap: 20px;
-    cursor: pointer;
 }
 
 .testimonials__button {
@@ -62,6 +61,7 @@
     border-radius: 70%;
     border: 1px solid $white;
     background-color: $white;
+    cursor: pointer;
 }
 
 .testimonials__button:focus,
@@ -72,4 +72,12 @@
 .testimonials__button--active {
     background-color: #F2C94C;
     border: 1px solid #F2C94C;
+}
+
+.testimonials__slider {
+    display: none;
+}
+
+.testimonials__slider--active {
+    display: block;
 }
