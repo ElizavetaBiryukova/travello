@@ -27,6 +27,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .page-header__burger {
@@ -48,6 +49,33 @@
 }
 
 .page-header__burger:focus .page-header__bar,
-.page-header__burger:hover .page-header__bar{
+.page-header__burger:hover .page-header__bar {
     background-color: $black;
+}
+
+.page-header__burger--open:focus .page-header__bar,
+.page-header__burger--open:hover .page-header__bar {
+background-color: rgb(34, 112, 197)
+}
+
+.page-header__burger--open {
+    z-index: 12;
+    position: absolute;
+    top: 34px;
+    right: 0px;
+}
+
+
+.page-header__burger--open .page-header__bar--3 {
+    opacity: 0;
+}
+
+.page-header__burger--open .page-header__bar--1 {
+    transform: translateY(-50%) rotate(45deg);
+    margin: -2px 0px;
+}
+
+.page-header__burger--open .page-header__bar--2 {
+    transform: translateY(-50%) rotate(-45deg);
+    margin: -1px 0px;
 }
