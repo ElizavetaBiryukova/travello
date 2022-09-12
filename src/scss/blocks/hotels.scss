@@ -47,10 +47,10 @@
 }
 
 .hotels__icon:focus,
-.hotels__icon:hover {
+.hotels__icon:hover,
+.hotels__heart-icon--active {
     fill: rgb(217, 0, 0);
 }
-
 
 .hotels__info {
     padding: 24px 15px;
