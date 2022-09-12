@@ -3,11 +3,11 @@
     padding-left: 0px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 10px;
     margin: 0px 25px;
-    width:max-content;
+    min-width: 300px;
     padding: 0px 0px 40px 0px;
-    overflow:visible;
 }
 
 .countries__button {
@@ -18,13 +18,13 @@
     height: 28px;
     border-radius: 8px;
     font-weight: 700;
+    font-size: 14px;
     color: $white;
     cursor: pointer;
 }
 
-.countries__button:focus,
 .countries__button:hover{
-background-color: rgba(242, 201, 76, .5);
+background-color: rgba(242, 200, 73, 0.792);
 }
 
 .countries__button--active {
