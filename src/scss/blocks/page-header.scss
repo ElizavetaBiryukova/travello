@@ -3,11 +3,11 @@
 
     @media (min-width: $desktop-width) {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         background-color: $black;
         width: 100%;
         margin: -15px -15px 0px -15px;
-        padding-right: 50px;
+        padding-right: 30px;
     }
 }
 
@@ -31,6 +31,11 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+
+    @media (min-width: $desktop-width) {
+        max-width: 1400px;
+        margin: auto;
+    }
 }
 
 .page-header__burger {
