@@ -1,17 +1,7 @@
 const countriesList = document.querySelector('.countries__list');
-const countriesItem = document.querySelectorAll('.countries__item');
 const buttons = document.querySelectorAll('.countries__button');
 const hotels = document.querySelectorAll('.hotels__item');
 const viewAll = document.querySelector('.gallery__button');
-
-// buttons.forEach(button => {
-//     button.addEventListener('click', () => {
-//         buttons.forEach(item => {
-//             item.classList.remove('countries__button--active');
-//         });
-//         button.classList.add('countries__button--active');
-//     });
-// });
 
 const filter = () => {
     countriesList.addEventListener('click', (event) => {
@@ -41,14 +31,20 @@ const filter = () => {
                 getItems('hotels__item--bhutan');
                 break;
 
-            case 'thailaand':
-                getItems('hotels__item--thailaand');
+            case 'thailand':
+                getItems('hotels__item--thailand');
                 break;
 
             case 'nepal':
                 getItems('hotels__item--nepal');
                 break;
         }
+    });
+
+    viewAll.addEventListener('click', () => {
+        hotels.forEach(item => {
+            item.style.display = 'block';
+        });
     });
 };
 
