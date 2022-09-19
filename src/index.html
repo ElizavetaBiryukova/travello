@@ -239,27 +239,28 @@
           <ul class="gallery__countries-list countries__list">
             <li class="countries__item">
               <button aria-label="Country switch button" type="button"
-                class="countries__button countries__button--active">Singapore</button>
+                class="countries__button countries__button--active"  data-id="singapore">Singapore</button>
             </li>
             <li class="countries__item">
-              <button aria-label="Country switch button" type="button" class="countries__button">China</button>
+              <button class="countries__button" data-id="china" aria-label="Country switch button" type="button">China</button>
             </li>
             <li class="countries__item">
-              <button aria-label="Country switch button" type="button" class="countries__button">India</button>
+              <button class="countries__button" data-id="india" aria-label="Country switch button" type="button">India</button>
             </li>
             <li class="countries__item">
-              <button aria-label="Country switch button" type="button" class="countries__button">Bhutan</button>
+              <button class="countries__button" data-id="bhutan" aria-label="Country switch button" type="button">Bhutan</button>
             </li>
             <li class="countries__item">
-              <button aria-label="Country switch button" type="button" class="countries__button">Thailand</button>
+              <button class="countries__button" data-id="thailaand" aria-label="Country switch button" type="button">Thailand</button>
             </li>
             <li class="countries__item">
-              <button aria-label="Country switch button" type="button" class="countries__button">Nepal</button>
+              <button class="countries__button" data-id="nepal" aria-label="Country switch button" type="button">Nepal</button>
             </li>
           </ul>
         </div>
         <div class="gallery__hotels hotels">
-          <article class="hotels__item">
+          
+          <article class="hotels__item hotels__item--singapore">
             <h3 class="visually-hidden">Hotel description</h3>
             <div class="hotels__like">
               <button tabindex="0" class="hotels__heart-icon" aria-label="Like">
@@ -271,7 +272,7 @@
             <img src="img/Hotel.png" alt="hotel" class="hotels__img">
             <div class="hotels__info">
               <h4 class="hotels__name">DoubleTree Montreal Hotel</h4>
-              <div aria-label="Hotel rating" class="hotels__rating">
+              <div class="hotels__rating">
                 <span class="hotels__star hotels__star--active"></span>
                 <span class="hotels__star hotels__star--active"></span>
                 <span class="hotels__star hotels__star--active"></span>
@@ -290,7 +291,7 @@
               <button aria-label="Select a hotel rooms" class="hotels__button">select rooms</button>
             </div>
           </article>
-          <article class="hotels__item">
+          <article class="hotels__item hotels__item--china">
             <h3 class="visually-hidden">Hotel description</h3>
             <div class="hotels__like">
               <button tabindex="0" class="hotels__heart-icon" aria-label="Like">
@@ -302,7 +303,7 @@
             <img src="img/Hotel1.png" alt="hotel" class="hotels__img">
             <div class="hotels__info">
               <h4 class="hotels__name">DoubleTree Montreal Hotel</h4>
-              <div aria-label="Hotel rating" class="hotels__rating">
+              <div class="hotels__rating">
                 <span class="hotels__star hotels__star--active"></span>
                 <span class="hotels__star hotels__star--active"></span>
                 <span class="hotels__star hotels__star--active"></span>
@@ -321,7 +322,7 @@
               <button aria-label="Select a hotel rooms" class="hotels__button">select rooms</button>
             </div>
           </article>
-          <article class="hotels__item">
+          <article class="hotels__item hotels__item--china">
             <h3 class="visually-hidden">Hotel description</h3>
             <div class="hotels__like">
               <button tabindex="0" class="hotels__heart-icon" aria-label="Like">
@@ -333,7 +334,7 @@
             <img src="img/Hotel2.png" alt="hotel" class="hotels__img">
             <div class="hotels__info">
               <h4 class="hotels__name">DoubleTree Montreal Hotel</h4>
-              <div aria-label="Hotel rating" class="hotels__rating">
+              <div class="hotels__rating">
                 <span class="hotels__star hotels__star--active"></span>
                 <span class="hotels__star hotels__star--active"></span>
                 <span class="hotels__star hotels__star--active"></span>
@@ -352,7 +353,7 @@
               <button aria-label="Select a hotel rooms" class="hotels__button">select rooms</button>
             </div>
           </article>
-          <article class="hotels__item">
+          <article class="hotels__item hotels__item--china">
             <h3 class="visually-hidden">Hotel description</h3>
             <div class="hotels__like">
               <button tabindex="0" type="button" class="hotels__heart-icon" aria-label="Like">
@@ -364,7 +365,162 @@
             <img src="img/Hotel3.png" alt="hotel" class="hotels__img">
             <div class="hotels__info">
               <h4 class="hotels__name">DoubleTree Montreal Hotel</h4>
-              <div aria-label="Hotel rating" class="hotels__rating">
+              <div class="hotels__rating">
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star"></span>
+                <span class="hotels__star"></span>
+              </div>
+              <div class="hotels__price">
+                <p class="hotels__old-price">$149</p>
+                <p class="hotels__new-price">$99</p>
+                <p class="hotels__price-text">/night</p>
+              </div>
+              <div class="hotels__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing
+                cursus
+                auctor eget sed phasellus senectus. Ut tellus donec vestibulum tristique leo bibendum in a, tincidunt.
+              </div>
+              <button aria-label="Select a hotel rooms" class="hotels__button">select rooms</button>
+            </div>
+          </article>
+          <article class="hotels__item hotels__item--india">
+            <h3 class="visually-hidden">Hotel description</h3>
+            <div class="hotels__like">
+              <button tabindex="0" type="button" class="hotels__heart-icon" aria-label="Like">
+                <svg aria-label="Like" class="hotels__icon" width="24" height="24">
+                  <use xlink:href="#heart"></use>
+                </svg>
+              </button>
+            </div>
+            <img src="img/Hotel3.png" alt="hotel" class="hotels__img">
+            <div class="hotels__info">
+              <h4 class="hotels__name">DoubleTree Montreal Hotel</h4>
+              <div class="hotels__rating">
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star"></span>
+                <span class="hotels__star"></span>
+              </div>
+              <div class="hotels__price">
+                <p class="hotels__old-price">$149</p>
+                <p class="hotels__new-price">$99</p>
+                <p class="hotels__price-text">/night</p>
+              </div>
+              <div class="hotels__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing
+                cursus
+                auctor eget sed phasellus senectus. Ut tellus donec vestibulum tristique leo bibendum in a, tincidunt.
+              </div>
+              <button aria-label="Select a hotel rooms" class="hotels__button">select rooms</button>
+            </div>
+          </article>
+          <article class="hotels__item hotels__item--india">
+            <h3 class="visually-hidden">Hotel description</h3>
+            <div class="hotels__like">
+              <button tabindex="0" type="button" class="hotels__heart-icon" aria-label="Like">
+                <svg aria-label="Like" class="hotels__icon" width="24" height="24">
+                  <use xlink:href="#heart"></use>
+                </svg>
+              </button>
+            </div>
+            <img src="img/Hotel3.png" alt="hotel" class="hotels__img">
+            <div class="hotels__info">
+              <h4 class="hotels__name">DoubleTree Montreal Hotel</h4>
+              <div class="hotels__rating">
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star"></span>
+                <span class="hotels__star"></span>
+              </div>
+              <div class="hotels__price">
+                <p class="hotels__old-price">$149</p>
+                <p class="hotels__new-price">$99</p>
+                <p class="hotels__price-text">/night</p>
+              </div>
+              <div class="hotels__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing
+                cursus
+                auctor eget sed phasellus senectus. Ut tellus donec vestibulum tristique leo bibendum in a, tincidunt.
+              </div>
+              <button aria-label="Select a hotel rooms" class="hotels__button">select rooms</button>
+            </div>
+          </article>
+          <article class="hotels__item hotels__item--bhutan">
+            <h3 class="visually-hidden">Hotel description</h3>
+            <div class="hotels__like">
+              <button tabindex="0" type="button" class="hotels__heart-icon" aria-label="Like">
+                <svg aria-label="Like" class="hotels__icon" width="24" height="24">
+                  <use xlink:href="#heart"></use>
+                </svg>
+              </button>
+            </div>
+            <img src="img/Hotel3.png" alt="hotel" class="hotels__img">
+            <div class="hotels__info">
+              <h4 class="hotels__name">DoubleTree Montreal Hotel</h4>
+              <div class="hotels__rating">
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star"></span>
+                <span class="hotels__star"></span>
+              </div>
+              <div class="hotels__price">
+                <p class="hotels__old-price">$149</p>
+                <p class="hotels__new-price">$99</p>
+                <p class="hotels__price-text">/night</p>
+              </div>
+              <div class="hotels__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing
+                cursus
+                auctor eget sed phasellus senectus. Ut tellus donec vestibulum tristique leo bibendum in a, tincidunt.
+              </div>
+              <button aria-label="Select a hotel rooms" class="hotels__button">select rooms</button>
+            </div>
+          </article>
+          <article class="hotels__item hotels__item--nepal">
+            <h3 class="visually-hidden">Hotel description</h3>
+            <div class="hotels__like">
+              <button tabindex="0" type="button" class="hotels__heart-icon" aria-label="Like">
+                <svg aria-label="Like" class="hotels__icon" width="24" height="24">
+                  <use xlink:href="#heart"></use>
+                </svg>
+              </button>
+            </div>
+            <img src="img/Hotel3.png" alt="hotel" class="hotels__img">
+            <div class="hotels__info">
+              <h4 class="hotels__name">DoubleTree Montreal Hotel</h4>
+              <div class="hotels__rating">
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star"></span>
+                <span class="hotels__star"></span>
+              </div>
+              <div class="hotels__price">
+                <p class="hotels__old-price">$149</p>
+                <p class="hotels__new-price">$99</p>
+                <p class="hotels__price-text">/night</p>
+              </div>
+              <div class="hotels__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing
+                cursus
+                auctor eget sed phasellus senectus. Ut tellus donec vestibulum tristique leo bibendum in a, tincidunt.
+              </div>
+              <button aria-label="Select a hotel rooms" class="hotels__button">select rooms</button>
+            </div>
+          </article>
+          <article class="hotels__item hotels__item--thailand">
+            <h3 class="visually-hidden">Hotel description</h3>
+            <div class="hotels__like">
+              <button tabindex="0" type="button" class="hotels__heart-icon" aria-label="Like">
+                <svg aria-label="Like" class="hotels__icon" width="24" height="24">
+                  <use xlink:href="#heart"></use>
+                </svg>
+              </button>
+            </div>
+            <img src="img/Hotel3.png" alt="hotel" class="hotels__img">
+            <div class="hotels__info">
+              <h4 class="hotels__name">DoubleTree Montreal Hotel</h4>
+              <div class="hotels__rating">
                 <span class="hotels__star hotels__star--active"></span>
                 <span class="hotels__star hotels__star--active"></span>
                 <span class="hotels__star hotels__star--active"></span>
@@ -385,7 +541,7 @@
           </article>
         </div>
         <div class="gallery__view-all">
-          <button aria-label="Show all hotels" class="gallery__button">view all</button>
+          <button class="gallery__button" aria-label="Show all hotels">view all</button>
         </div>
       </div>
     </section>
