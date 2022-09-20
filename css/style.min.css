@@ -1,0 +1,1108 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Arsenal;
+  font-display: swap;
+  src: url("../fonts/Arsenal-Bold.woff2") format("woff2"), url("../fonts/Arsenal-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Arsenal;
+  font-display: swap;
+  src: url("../fonts/Arsenal-BoldItalic.woff2") format("woff2"), url("../fonts/Arsenal-BoldItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Arsenal;
+  font-display: swap;
+  src: url("../fonts/Arsenal-Italic.woff2") format("woff2"), url("../fonts/Arsenal-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: DMSerifDisplay;
+  font-display: swap;
+  src: url("../fonts/DMSerifDisplay-Regular.woff2") format("woff2"), url("../fonts/DMSerifDisplay-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Arsenal;
+  font-display: swap;
+  src: url("../fonts/Arsenal-Regular.woff2") format("woff2"), url("../fonts/Arsenal-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: OpenSans;
+  font-display: swap;
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: DMSerifDisplay;
+  font-display: swap;
+  src: url("../fonts/DMSerifDisplay-Italic.woff2") format("woff2"), url("../fonts/DMSerifDisplay-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Roboto;
+  font-display: swap;
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: OpenSans;
+  font-display: swap;
+  src: url("../fonts/OpenSans-Italic.woff2") format("woff2"), url("../fonts/OpenSans-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: OpenSans;
+  font-display: swap;
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Righteous;
+  font-display: swap;
+  src: url("../fonts/Righteous-Regular.woff2") format("woff2"), url("../fonts/Righteous-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Roboto;
+  font-display: swap;
+  src: url("../fonts/Roboto-Italic.woff2") format("woff2"), url("../fonts/Roboto-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Roboto;
+  font-display: swap;
+  src: url("../fonts/Roboto-BoldItalic.woff2") format("woff2"), url("../fonts/Roboto-BoldItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Roboto;
+  font-display: swap;
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.block {
+  display: block;
+}
+
+.block-none {
+  display: none;
+}
+
+.page {
+  height: 100%;
+  font-family: "OpenSans", "Arial", sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  background-color: rgb(9, 19, 27);
+  font-weight: 400;
+  background: url("../../img/Rectangle 3.png") center top no-repeat, rgb(9, 19, 27);
+  background-size: cover;
+}
+
+.page__body {
+  min-height: 100%;
+  margin: 15px;
+}
+
+.page-header__contacts {
+  display: none;
+}
+@media (min-width: 1400px) {
+  .page-header__contacts {
+    display: flex;
+    justify-content: space-around;
+    background-color: #000000;
+    width: 100%;
+    margin: -15px -15px 0px -15px;
+    padding-right: 30px;
+  }
+}
+
+.page-header__logo {
+  font-family: "Righteous", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 44.7px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.page-header__logo:focus,
+.page-header__logo:hover {
+  color: #000000;
+}
+
+.page-header__menu {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+@media (min-width: 1400px) {
+  .page-header__menu {
+    max-width: 1400px;
+    margin: auto;
+  }
+}
+
+.page-header__burger {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  cursor: pointer;
+}
+@media (min-width: 1400px) {
+  .page-header__burger {
+    display: none;
+  }
+}
+
+.page-header__bar {
+  width: 20.54px;
+  height: 3.12px;
+  background-color: #ffffff;
+  margin: 4px 0;
+}
+
+.page-header__burger:focus .page-header__bar,
+.page-header__burger:hover .page-header__bar {
+  background-color: #000000;
+}
+
+.page-header__burger--open:focus .page-header__bar,
+.page-header__burger--open:hover .page-header__bar {
+  background-color: rgb(34, 112, 197);
+}
+
+.page-header__burger--open {
+  z-index: 12;
+  position: absolute;
+  top: 34px;
+  right: 0px;
+}
+
+.page-header__burger--open .page-header__bar--3 {
+  opacity: 0;
+}
+
+.page-header__burger--open .page-header__bar--1 {
+  transform: translateY(-50%) rotate(45deg);
+  margin: -2px 0px;
+}
+
+.page-header__burger--open .page-header__bar--2 {
+  transform: translateY(-50%) rotate(-45deg);
+  margin: -1px 0px;
+}
+
+.title__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  font-family: "Arsenal";
+  text-transform: uppercase;
+}
+@media (min-width: 1400px) {
+  .title__wrapper {
+    padding-top: 160px;
+  }
+}
+
+.title__description {
+  font-size: 30px;
+  margin: 10px 0px;
+}
+@media (min-width: 1400px) {
+  .title__description {
+    font-size: 36px;
+    letter-spacing: 0.2em;
+  }
+}
+
+.title__heading {
+  font-size: 75px;
+  margin: 10px 0px;
+}
+@media (min-width: 1400px) {
+  .title__heading {
+    font-size: 144px;
+  }
+}
+
+.search__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.search__description {
+  font-style: italic;
+}
+@media (min-width: 1400px) {
+  .search__description {
+    font-size: 18px;
+    font-style: italic;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+  }
+}
+
+.search__search-line {
+  display: flex;
+}
+
+.search__button {
+  width: 60px;
+  height: 60px;
+  border-radius: 0px 10px 10px 0px;
+  background-color: #000000;
+  border: 1px solid #000000;
+  cursor: pointer;
+}
+@media (min-width: 1400px) {
+  .search__button {
+    height: 76px;
+    width: 109px;
+  }
+}
+
+.search__input {
+  width: 240px;
+  height: 60px;
+  box-sizing: border-box;
+  border-radius: 10px 0px 0px 10px;
+  font-size: 19px;
+  border: 1px solid #000000;
+  cursor: pointer;
+  padding: 0px 18px;
+}
+@media (min-width: 1400px) {
+  .search__input {
+    width: 500px;
+    height: 76px;
+  }
+}
+
+.search__input:focus,
+.search__input:hover {
+  border: 1px solid #ffffff;
+}
+
+.search__button:focus,
+.search__button:hover {
+  border: 1px solid rgba(255, 255, 255, 0.678);
+}
+
+.advantages__list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0px 0px 30px 0px;
+}
+@media (min-width: 1400px) {
+  .advantages__list {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 0px 170px 0px;
+  }
+}
+
+.advantages__item {
+  padding-bottom: 30px;
+  text-align: center;
+}
+@media (min-width: 1400px) {
+  .advantages__item {
+    text-align: left;
+    max-width: 275px;
+  }
+}
+
+.advantages__title {
+  font-family: "Arsenal";
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 2px;
+  text-transform: capitalize;
+}
+
+.advantages__description {
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+.description__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  text-align: center;
+}
+@media (min-width: 660px) {
+  .description__wrapper {
+    max-width: 718px;
+    margin: auto;
+  }
+}
+@media (min-width: 1400px) {
+  .description__wrapper {
+    flex-direction: row;
+    max-width: 1400px;
+    gap: 138px;
+  }
+}
+
+.description__slogan {
+  font-family: "Arsenal";
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+@media (min-width: 1400px) {
+  .description__slogan {
+    font-size: 48px;
+    line-height: 60px;
+    text-align: left;
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .description__text {
+    font-size: 17px;
+    line-height: 29px;
+    text-align: left;
+    max-width: 600px;
+  }
+}
+
+.gallery__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 70px;
+  align-items: center;
+}
+
+.gallery__view-all {
+  margin: auto;
+}
+
+.gallery__up {
+  margin: auto;
+}
+
+.gallery__button {
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 900;
+  background-color: #000000;
+  box-sizing: border-box;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  width: 151px;
+  height: 45px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.gallery__button:focus,
+.gallery__button:hover {
+  opacity: 0.7;
+}
+
+.gallery__nothing-found {
+  margin: -30px 0px 20px 0px;
+}
+
+.countries__list {
+  list-style-type: none;
+  padding-left: 0px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0px 25px;
+  min-width: 300px;
+  padding: 0px 0px 40px 0px;
+}
+
+.countries__button {
+  background-color: #000000;
+  box-sizing: border-box;
+  border: 1px solid #000000;
+  width: max-content;
+  height: 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.countries__button:hover {
+  background-color: rgba(242, 200, 73, 0.792);
+}
+
+.countries__button--active {
+  background-color: rgb(242, 201, 76);
+  box-sizing: border-box;
+  border: 1px solid rgb(242, 201, 76);
+  width: max-content;
+  height: 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.hotels {
+  display: grid;
+  gap: 30px;
+  margin: auto;
+  padding-bottom: 40px;
+}
+@media (min-width: 660px) {
+  .hotels {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1400px) {
+  .hotels {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.hotels__item {
+  width: min-content;
+  border-radius: 10px;
+  background-color: #000000;
+  position: relative;
+  margin: 0px -10px;
+}
+
+.hotels__item:focus,
+.hotels__item:hover {
+  opacity: 0.7;
+}
+
+.hotels__like {
+  position: absolute;
+  right: 26px;
+  top: 13px;
+}
+
+.hotels__heart-icon {
+  display: block;
+  width: 24px;
+  height: 23px;
+  border: none;
+  background-color: transparent;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.hotels__icon {
+  fill: #ffffff;
+}
+
+.hotels__icon:focus,
+.hotels__icon:hover,
+.hotels__heart-icon--active {
+  fill: rgb(217, 0, 0);
+}
+
+.hotels__info {
+  padding: 24px 15px;
+}
+
+.hotels__rating {
+  display: inline-block;
+  cursor: pointer;
+  padding-bottom: 20px;
+}
+
+.hotels__star {
+  padding: 0;
+  font-size: 25px;
+  line-height: 1;
+  color: rgb(137, 145, 175);
+}
+
+.hotels__star::before {
+  content: "★";
+}
+
+.hotels__star--active::before {
+  color: #FFC22B;
+}
+
+.hotels__name {
+  font-family: "Arsenal";
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.hotels__price {
+  font-family: "DMSerifDisplay";
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  line-height: 25px;
+  padding-bottom: 20px;
+}
+
+.hotels__old-price {
+  font-style: italic;
+  font-size: 22px;
+  text-decoration: line-through;
+  color: rgb(177, 180, 185);
+  margin: 0px;
+}
+
+.hotels__new-price {
+  font-size: 48px;
+  line-height: 43px;
+  margin: 0px;
+}
+
+.hotels__price-text {
+  margin: 0px;
+}
+
+.hotels__description {
+  font-size: 16px;
+  color: rgb(137, 145, 175);
+  line-height: 25px;
+  padding-bottom: 40px;
+}
+
+.hotels__button {
+  padding: 28px 55px;
+  border-radius: 8px;
+  background: rgb(0, 89, 172);
+  color: #ffffff;
+  box-sizing: border-box;
+  border: 1px solid rgb(0, 89, 172);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.hotels__button:focus,
+.hotels__button:hover {
+  background: rgb(13, 126, 232);
+  border: 1px solid rgb(13, 126, 232);
+}
+
+.testimonials__wrapper {
+  padding-top: 70px;
+  background-image: url(../../img/commas.svg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding-bottom: 40px;
+}
+@media (min-width: 660px) {
+  .testimonials__wrapper {
+    max-width: 900px;
+    margin: auto;
+  }
+}
+@media (min-width: 1400px) {
+  .testimonials__wrapper {
+    background-position: center left;
+    padding-left: 140px;
+    padding-bottom: 140px;
+  }
+}
+
+.testimonials__text {
+  position: relative;
+  font-family: "Arsenal";
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 54px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.testimonials__author {
+  display: flex;
+}
+
+.testimonials__author-name {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  color: rgb(137, 145, 175);
+}
+
+.testimonials__author-company {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: left;
+}
+
+.testimonials__control {
+  margin: auto;
+  width: 86px;
+  display: flex;
+  gap: 20px;
+}
+
+.testimonials__button {
+  box-sizing: border-box;
+  width: 8px;
+  height: 12px;
+  border-radius: 70%;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.testimonials__button:focus,
+.testimonials__button:hover {
+  border: 1px solid #0a14c6;
+}
+
+.testimonials__button--active {
+  background-color: #F2C94C;
+  border: 1px solid #F2C94C;
+}
+
+.testimonials__slider {
+  display: none;
+}
+
+.testimonials__slider--active {
+  display: block;
+}
+
+.possibility__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+}
+@media (min-width: 660px) {
+  .possibility__wrapper {
+    flex-direction: row;
+    gap: 20px;
+    padding-top: 30px;
+  }
+}
+@media (min-width: 1400px) {
+  .possibility__wrapper {
+    flex-direction: column;
+    gap: 120px;
+  }
+}
+
+.possibility__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1400px) {
+  .possibility__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+  }
+}
+
+.possibility__img {
+  width: 310px;
+}
+@media (min-width: 1400px) {
+  .possibility__img {
+    width: 640px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}
+
+.possibility__title {
+  font-family: "Arsenal";
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 60px;
+  text-align: center;
+}
+@media (min-width: 1400px) {
+  .possibility__title {
+    font-size: 48px;
+    text-align: left;
+  }
+}
+
+.possibility__text {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 29px;
+  text-align: left;
+  color: rgb(137, 145, 175);
+  text-align: center;
+}
+@media (min-width: 1400px) {
+  .possibility__text {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1400px) {
+  .possibility__img--second {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+  }
+}
+
+.tariffs__list {
+  list-style-type: none;
+  padding-left: 0px;
+  padding-bottom: 100px;
+  background: url("../../img/footer-bg.png") center bottom no-repeat;
+}
+
+.tariff {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  gap: 30px;
+}
+@media (min-width: 1400px) {
+  .tariff {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.tariff__item {
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.tariff__item:focus,
+.tariff__item:hover {
+  opacity: 0.8;
+}
+
+.tariff__price {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 10px;
+}
+
+.tariff__cost {
+  font-family: "DMSerifDisplay";
+  font-size: 50px;
+  line-height: 25px;
+}
+
+.tariff__month {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 72px;
+  color: #A5ADBB;
+}
+
+.tariff__name {
+  font-family: "Arsenal";
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 25px;
+  padding-bottom: 30px;
+}
+
+.tariff__description {
+  font-size: 16px;
+  line-height: 25px;
+  color: rgb(137, 145, 175);
+  border-bottom: 2px solid rgba(235, 236, 237, 0.2);
+  padding-bottom: 20px;
+}
+
+.tariff__options {
+  font-size: 16px;
+  line-height: 25px;
+  color: rgb(137, 145, 175);
+  list-style-type: none;
+  padding: 20px 0px 100px 40px;
+  width: max-content;
+}
+
+.tariff__option {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.tariff__option::before {
+  content: "";
+  position: absolute;
+  background: no-repeat, url(../../img/check.svg);
+  width: 18px;
+  height: 15px;
+  right: 230px;
+}
+
+.tariff__button-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.teriff__button {
+  background-color: rgb(0, 89, 172);
+  color: #ffffff;
+  line-height: 25px;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid rgb(0, 89, 172);
+  border-radius: 8px;
+  padding: 12px 47px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.teriff__button:focus,
+.teriff__button:hover {
+  background-color: rgb(55, 150, 240);
+}
+
+.contacts__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(0, 89, 172, 0.4);
+}
+
+.contacts__name {
+  font-family: "Righteous";
+  font-size: 48px;
+  line-height: 86px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contacts__email {
+  font-family: "Roboto";
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.contacts__adress {
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  color: rgb(137, 145, 175);
+}
+
+.contacts__link {
+  color: rgb(137, 145, 175);
+}
+
+.contacts__link:focus,
+.contacts__link:hover {
+  color: #ffffff;
+}
+
+.social-list {
+  display: flex;
+  gap: 40px;
+  padding-left: 0px;
+  list-style-type: none;
+}
+
+.social-list__icon {
+  fill: #8991AF;
+  cursor: pointer;
+}
+
+.social-list__icon:focus,
+.social-list__icon:hover {
+  fill: #ffffff;
+}
+
+.page-footer__copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 17px;
+  line-height: 36px;
+  color: rgb(137, 145, 175);
+}
+@media (min-width: 660px) {
+  .page-footer__copyright {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0px;
+  }
+}
+@media (min-width: 1400px) {
+  .page-footer__copyright {
+    max-width: 1400px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1400px) {
+  .contacts-list {
+    display: flex;
+    gap: 50px;
+    font-family: "Roboto";
+    font-size: 18px;
+    line-height: 27px;
+    color: rgb(255, 255, 255);
+    list-style-type: none;
+    text-decoration: underline;
+    margin: 10px 0px;
+  }
+  .contacts-list__item {
+    position: relative;
+  }
+  .contacts-list__link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+  .contacts-list__link:focus,
+.contacts-list__link:hover {
+    color: #8991AF;
+  }
+  .contacts-list__item--email::before {
+    position: absolute;
+    content: "";
+    background: url(../../img/envelope.svg);
+    width: 24px;
+    height: 24px;
+    top: 0px;
+    right: 214px;
+  }
+  .contacts-list__item--phone::before {
+    position: absolute;
+    content: "";
+    background: url(../../img/headphones.svg);
+    width: 24px;
+    height: 24px;
+    top: 0px;
+    right: 148px;
+  }
+}
+.main-nav {
+  display: none;
+}
+@media (min-width: 1400px) {
+  .main-nav {
+    display: block;
+  }
+}
+
+.main-nav--open {
+  display: block;
+}
+
+.main-nav--open .main-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 10;
+  padding: 90px 30px;
+  background-color: #000000;
+  background-image: url(../../img/footer-bg.png);
+  background-position: center;
+  margin: 0px;
+  text-align: center;
+}
+
+.main-nav--open .main-nav__link {
+  font-family: "Arsenal";
+  font-size: 34px;
+}
+
+.main-nav__link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.main-nav__list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.main-nav__link:focus,
+.main-nav__link:hover {
+  color: #000000;
+}
+
+.main-nav--open .main-nav__link:focus,
+.main-nav--open .main-nav__link:hover {
+  color: rgb(34, 112, 197);
+}
+
+@media (min-width: 1400px) {
+  .main-nav__list {
+    flex-direction: row;
+    gap: 30px;
+    text-align: center;
+  }
+}
+.page-main {
+  max-width: 1400px;
+  margin: auto;
+}

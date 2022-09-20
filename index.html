@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The travel guide app "TRAVELLO"</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="page__body">
+  <svg style="display: none">
+    <symbol viewBox="0 0 19 19" fill="none" id="glass">
+      <path
+        d="M8 16C9.77498 15.9996 11.4988 15.4054 12.897 14.312L17.293 18.708L18.707 17.294L14.311 12.898C15.405 11.4997 15.9996 9.77544 16 8C16 3.589 12.411 0 8 0C3.589 0 0 3.589 0 8C0 12.411 3.589 16 8 16ZM8 2C11.309 2 14 4.691 14 8C14 11.309 11.309 14 8 14C4.691 14 2 11.309 2 8C2 4.691 4.691 2 8 2Z"
+        fill="white" />
+      <path
+        d="M9.41207 6.58609C9.79107 6.96609 10.0001 7.46809 10.0001 8.00009H12.0001C12.001 7.47451 11.8977 6.95398 11.6962 6.46857C11.4946 5.98316 11.1989 5.54251 10.8261 5.17209C9.31207 3.66009 6.68707 3.66009 5.17407 5.17209L6.58607 6.58809C7.34607 5.83009 8.65607 5.83209 9.41207 6.58609Z"
+        fill="white" />
+    </symbol>
+
+    <symbol viewBox="0 0 50 50" fill="none" id="house">
+      <path
+        d="M47.7273 9.09091H2.27273C1.66996 9.09091 1.09189 9.33036 0.665666 9.75658C0.239447 10.1828 0 10.7609 0 11.3636V20.4545C0.00395343 21.8612 0.442906 23.2323 1.25668 24.3797C2.07045 25.5271 3.21921 26.3947 4.54545 26.8636V47.7273C4.54545 48.33 4.7849 48.9081 5.21112 49.3343C5.63734 49.7606 6.21542 50 6.81818 50H43.1818C43.7846 50 44.3627 49.7606 44.7889 49.3343C45.2151 48.9081 45.4545 48.33 45.4545 47.7273V26.8636C46.7808 26.3947 47.9296 25.5271 48.7433 24.3797C49.5571 23.2323 49.996 21.8612 50 20.4545V11.3636C50 10.7609 49.7606 10.1828 49.3343 9.75658C48.9081 9.33036 48.33 9.09091 47.7273 9.09091ZM31.8182 13.6364H36.3636V20.4545C36.3636 21.0573 36.1242 21.6354 35.698 22.0616C35.2718 22.4878 34.6937 22.7273 34.0909 22.7273C33.4881 22.7273 32.9101 22.4878 32.4838 22.0616C32.0576 21.6354 31.8182 21.0573 31.8182 20.4545V13.6364ZM22.7273 13.6364H27.2727V20.4545C27.2727 21.0573 27.0333 21.6354 26.6071 22.0616C26.1808 22.4878 25.6028 22.7273 25 22.7273C24.3972 22.7273 23.8192 22.4878 23.3929 22.0616C22.9667 21.6354 22.7273 21.0573 22.7273 20.4545V13.6364ZM13.6364 13.6364H18.1818V20.4545C18.1818 21.0573 17.9424 21.6354 17.5162 22.0616C17.0899 22.4878 16.5119 22.7273 15.9091 22.7273C15.3063 22.7273 14.7282 22.4878 14.302 22.0616C13.8758 21.6354 13.6364 21.0573 13.6364 20.4545V13.6364ZM6.81818 22.7273C6.21542 22.7273 5.63734 22.4878 5.21112 22.0616C4.7849 21.6354 4.54545 21.0573 4.54545 20.4545V13.6364H9.09091V20.4545C9.09091 21.0573 8.85146 21.6354 8.42524 22.0616C7.99902 22.4878 7.42095 22.7273 6.81818 22.7273ZM29.5455 45.4545H20.4545V40.9091C20.4545 39.7036 20.9334 38.5474 21.7859 37.695C22.6383 36.8425 23.7945 36.3636 25 36.3636C26.2055 36.3636 27.3617 36.8425 28.2141 37.695C29.0666 38.5474 29.5455 39.7036 29.5455 40.9091V45.4545ZM40.9091 45.4545H34.0909V40.9091C34.0909 38.498 33.1331 36.1857 31.4282 34.4809C29.7234 32.776 27.4111 31.8182 25 31.8182C22.5889 31.8182 20.2766 32.776 18.5718 34.4809C16.8669 36.1857 15.9091 38.498 15.9091 40.9091V45.4545H9.09091V26.8636C9.9263 26.5536 10.6969 26.0912 11.3636 25.5C12.6137 26.6181 14.232 27.2362 15.9091 27.2362C17.5862 27.2362 19.2045 26.6181 20.4545 25.5C21.7046 26.6181 23.3229 27.2362 25 27.2362C26.6771 27.2362 28.2954 26.6181 29.5455 25.5C30.7955 26.6181 32.4138 27.2362 34.0909 27.2362C35.768 27.2362 37.3863 26.6181 38.6364 25.5C39.3031 26.0912 40.0737 26.5536 40.9091 26.8636V45.4545ZM45.4545 20.4545C45.4545 21.0573 45.2151 21.6354 44.7889 22.0616C44.3627 22.4878 43.7846 22.7273 43.1818 22.7273C42.5791 22.7273 42.001 22.4878 41.5748 22.0616C41.1485 21.6354 40.9091 21.0573 40.9091 20.4545V13.6364H45.4545V20.4545ZM7.5 4.54545H43.1818C43.7846 4.54545 44.3627 4.30601 44.7889 3.87979C45.2151 3.45357 45.4545 2.87549 45.4545 2.27273C45.4545 1.66996 45.2151 1.09189 44.7889 0.665666C44.3627 0.239447 43.7846 0 43.1818 0H7.5C6.89724 0 6.31916 0.239447 5.89294 0.665666C5.46672 1.09189 5.22727 1.66996 5.22727 2.27273C5.22727 2.87549 5.46672 3.45357 5.89294 3.87979C6.31916 4.30601 6.89724 4.54545 7.5 4.54545Z"
+        fill="white" />
+    </symbol>
+
+    <symbol viewBox="0 0 50 62" fill="none" id="fire">
+      <path
+        d="M15.1897 20.4314L15.1841 20.4342L15.1758 20.4397L15.1897 20.4314ZM42.8398 19.9148C42.6466 19.7294 42.4322 19.5671 42.2009 19.4313C41.8736 19.2397 41.5102 19.1168 41.1332 19.0703C40.7562 19.0239 40.3737 19.0548 40.0092 19.1612C39.6447 19.2677 39.306 19.4473 39.0141 19.6891C38.7222 19.9308 38.4833 20.2295 38.312 20.5668C37.3553 22.4424 36.0356 24.1117 34.4287 25.4788C34.6751 24.1017 34.7996 22.7059 34.8009 21.3072C34.8062 17.0531 33.6779 12.8735 31.531 9.19407C29.384 5.51464 26.2951 2.46672 22.5786 0.360657C22.1691 0.129225 21.7071 0.00517135 21.2361 0.000158219C20.7651 -0.00485491 20.3005 0.109337 19.8861 0.331999C19.4716 0.554661 19.121 0.87848 18.867 1.27301C18.613 1.66755 18.464 2.11984 18.4342 2.58736C18.2786 5.20665 17.5901 7.76727 16.4102 10.1141C15.2304 12.4609 13.5838 14.5451 11.5702 16.2405L10.9313 16.7571C8.8247 18.1667 6.96008 19.9046 5.40909 21.9039C2.99873 24.9238 1.32904 28.4608 0.532443 32.2342C-0.264153 36.0076 -0.16574 39.9138 0.819879 43.6428C1.8055 47.3718 3.65121 50.8212 6.21061 53.7172C8.77002 56.6133 11.9727 58.8764 15.5647 60.3271C15.9864 60.4978 16.4439 60.5628 16.8968 60.5163C17.3497 60.4699 17.7842 60.3134 18.162 60.0607C18.5399 59.808 18.8494 59.4669 19.0635 59.0672C19.2776 58.6675 19.3896 58.2217 19.3897 57.7688C19.3874 57.4762 19.3406 57.1856 19.2508 56.9069C18.6293 54.5836 18.4503 52.1652 18.723 49.7764C21.3521 54.7066 25.5718 58.6143 30.7037 60.8713C31.3298 61.1497 32.0375 61.1871 32.6898 60.9763C36.7439 59.6747 40.3961 57.3637 43.2993 54.263C46.2026 51.1623 48.2605 47.3749 49.2775 43.2605C50.2946 39.1461 50.237 34.8413 49.1102 30.7553C47.9835 26.6692 45.825 22.9376 42.8398 19.9148ZM31.9926 55.3625C29.5711 54.1423 27.435 52.4288 25.7232 50.3336C24.0113 48.2384 22.7619 45.8083 22.0564 43.2013C21.8407 42.3234 21.6738 41.4343 21.5564 40.5381C21.4774 39.9674 21.2209 39.4356 20.823 39.017C20.425 38.5984 19.9054 38.314 19.3369 38.2036C19.1621 38.1699 18.9844 38.1532 18.8064 38.1539C18.3183 38.1534 17.8387 38.2809 17.4159 38.5234C16.9932 38.7659 16.6421 39.1149 16.398 39.5352C14.0937 43.4893 12.9352 48.0007 13.0508 52.5695C11.0234 51.0022 9.32904 49.0504 8.06581 46.827C6.80258 44.6036 5.99565 42.153 5.69179 39.6171C5.38793 37.0813 5.59319 34.5107 6.29567 32.0543C6.99815 29.598 8.18387 27.3047 9.78411 25.3075C10.9992 23.7379 12.4649 22.3772 14.123 21.2796C14.1956 21.2333 14.2652 21.1825 14.3314 21.1276C14.3314 21.1276 15.1536 20.4508 15.1814 20.4369C19.1403 17.1081 21.9563 12.6337 23.237 7.63752C26.2632 10.4205 28.2808 14.1194 28.9764 18.1599C29.6721 22.2003 29.0069 26.3561 27.0842 29.9819C26.8297 30.4659 26.7252 31.014 26.7838 31.557C26.8425 32.1 27.0616 32.6136 27.4135 33.0328C27.7655 33.452 28.2345 33.7581 28.7612 33.9123C29.288 34.0666 29.8489 34.0621 30.3731 33.8994C34.6279 32.5723 38.3719 29.9807 41.1009 26.4734C42.7418 28.8831 43.8146 31.63 44.2395 34.5094C44.6643 37.3889 44.4303 40.3265 43.5547 43.1035C42.6792 45.8804 41.1848 48.425 39.1828 50.5477C37.1809 52.6703 34.7231 54.3161 31.9926 55.3625Z"
+        fill="white" />
+    </symbol>
+
+    <symbol viewBox="0 0 50 50" fill="none" id="chat">
+      <path
+        d="M25.0352 19.9991C24.3731 19.9991 23.7381 20.2625 23.2699 20.7313C22.8017 21.2001 22.5387 21.836 22.5387 22.499V32.4986C22.5387 33.1616 22.8017 33.7974 23.2699 34.2663C23.7381 34.7351 24.3731 34.9985 25.0352 34.9985C25.6973 34.9985 26.3323 34.7351 26.8005 34.2663C27.2686 33.7974 27.5317 33.1616 27.5317 32.4986V22.499C27.5317 21.836 27.2686 21.2001 26.8005 20.7313C26.3323 20.2625 25.6973 19.9991 25.0352 19.9991ZM15.0493 27.4988C14.3871 27.4988 13.7522 27.7622 13.284 28.231C12.8158 28.6998 12.5528 29.3357 12.5528 29.9987V32.4986C12.5528 33.1616 12.8158 33.7974 13.284 34.2663C13.7522 34.7351 14.3871 34.9985 15.0493 34.9985C15.7114 34.9985 16.3464 34.7351 16.8145 34.2663C17.2827 33.7974 17.5457 33.1616 17.5457 32.4986V29.9987C17.5457 29.3357 17.2827 28.6998 16.8145 28.231C16.3464 27.7622 15.7114 27.4988 15.0493 27.4988ZM25.0352 0C21.7568 0 18.5104 0.646616 15.4816 1.90293C12.4527 3.15924 9.70059 5.00064 7.38239 7.32201C2.70058 12.0102 0.0703668 18.3688 0.0703668 24.9989C0.0485421 30.7715 2.04457 36.3697 5.71242 40.8232L0.719452 45.823C0.373046 46.1745 0.138386 46.6209 0.0450823 47.1059C-0.0482215 47.5908 0.00401159 48.0926 0.195191 48.5479C0.402543 48.9977 0.738685 49.3756 1.16095 49.6338C1.58321 49.8919 2.07255 50.0186 2.56685 49.9978H25.0352C31.6563 49.9978 38.0062 47.364 42.688 42.6758C47.3698 37.9876 50 31.629 50 24.9989C50 18.3688 47.3698 12.0102 42.688 7.32201C38.0062 2.6338 31.6563 0 25.0352 0ZM25.0352 44.998H8.58337L10.9051 42.6731C11.141 42.4416 11.3286 42.1655 11.4572 41.8608C11.5858 41.5561 11.6527 41.2289 11.654 40.8982C11.6447 40.2388 11.3755 39.6098 10.9051 39.1483C7.63617 35.8785 5.60051 31.5749 5.14494 26.9708C4.68938 22.3666 5.84209 17.7467 8.40669 13.8982C10.9713 10.0497 14.7891 7.21058 19.2097 5.86467C23.6303 4.51877 28.3801 4.7493 32.65 6.517C36.9199 8.28469 40.4456 11.4802 42.6265 15.559C44.8074 19.6379 45.5085 24.3478 44.6104 28.8862C43.7123 33.4247 41.2706 37.511 37.7012 40.4488C34.1318 43.3867 29.6556 44.9944 25.0352 44.998ZM35.0211 14.9993C34.359 14.9993 33.724 15.2627 33.2558 15.7315C32.7877 16.2004 32.5246 16.8362 32.5246 17.4992V32.4986C32.5246 33.1616 32.7877 33.7974 33.2558 34.2663C33.724 34.7351 34.359 34.9985 35.0211 34.9985C35.6832 34.9985 36.3182 34.7351 36.7864 34.2663C37.2546 33.7974 37.5176 33.1616 37.5176 32.4986V17.4992C37.5176 16.8362 37.2546 16.2004 36.7864 15.7315C36.3182 15.2627 35.6832 14.9993 35.0211 14.9993Z"
+        fill="white" />
+    </symbol>
+
+    <symbol viewBox="0 0 50 50" fill="none" id="display">
+      <path
+        d="M42.5 0H7.5C5.51088 0 3.60322 0.790177 2.1967 2.1967C0.790177 3.60322 0 5.51088 0 7.5V32.5C0 34.4891 0.790177 36.3968 2.1967 37.8033C3.60322 39.2098 5.51088 40 7.5 40H15V45H7.5C6.83696 45 6.20107 45.2634 5.73223 45.7322C5.26339 46.2011 5 46.837 5 47.5C5 48.163 5.26339 48.7989 5.73223 49.2678C6.20107 49.7366 6.83696 50 7.5 50H42.5C43.163 50 43.7989 49.7366 44.2678 49.2678C44.7366 48.7989 45 48.163 45 47.5C45 46.837 44.7366 46.2011 44.2678 45.7322C43.7989 45.2634 43.163 45 42.5 45H35V40H42.5C44.4891 40 46.3968 39.2098 47.8033 37.8033C49.2098 36.3968 50 34.4891 50 32.5V7.5C50 5.51088 49.2098 3.60322 47.8033 2.1967C46.3968 0.790177 44.4891 0 42.5 0ZM30 45H20V40H30V45ZM45 32.5C45 33.163 44.7366 33.7989 44.2678 34.2678C43.7989 34.7366 43.163 35 42.5 35H7.5C6.83696 35 6.20107 34.7366 5.73223 34.2678C5.26339 33.7989 5 33.163 5 32.5V30H45V32.5ZM45 25H5V7.5C5 6.83696 5.26339 6.20107 5.73223 5.73223C6.20107 5.26339 6.83696 5 7.5 5H42.5C43.163 5 43.7989 5.26339 44.2678 5.73223C44.7366 6.20107 45 6.83696 45 7.5V25Z"
+        fill="white" />
+    </symbol>
+
+    <symbol viewBox="0 0 7 14" id="facebook">
+      <path
+        d="M4.5 5H6.75L6.46875 7.25H4.5V14H1.58203V7.25H0V5H1.58203V3.48828C1.58203 2.50391 1.82812 1.76562 2.32031 1.27344C2.8125 0.757812 3.63281 0.5 4.78125 0.5H6.75V2.75H5.55469C5.10938 2.75 4.81641 2.82031 4.67578 2.96094C4.55859 3.10156 4.5 3.33594 4.5 3.66406V5Z" />
+    </symbol>
+
+    <symbol viewBox="0 0 17 14" id="twitter">
+      <path
+        d="M16.5942 2.11719C16.1724 2.77344 15.6099 3.35937 14.9067 3.875V4.29688C14.9067 6.75781 14.0161 8.99609 12.2349 11.0117C10.4771 13.0039 8.1333 14 5.20361 14C3.32861 14 1.59424 13.4844 0.000488281 12.4531C0.375488 12.5 0.64502 12.5234 0.809082 12.5234C2.37939 12.5234 3.78564 12.0312 5.02783 11.0469C4.30127 11.0234 3.64502 10.8008 3.05908 10.3789C2.47314 9.93359 2.07471 9.37109 1.86377 8.69141C2.14502 8.73828 2.35596 8.76172 2.49658 8.76172C2.73096 8.76172 3.03564 8.71484 3.41064 8.62109C2.63721 8.45703 1.98096 8.07031 1.44189 7.46094C0.92627 6.82812 0.668457 6.10156 0.668457 5.28125V5.24609C1.18408 5.52734 1.69971 5.66797 2.21533 5.66797C1.20752 5.01172 0.703613 4.0625 0.703613 2.82031C0.703613 2.23437 0.855957 1.67187 1.16064 1.13281C2.96533 3.35937 5.29736 4.54297 8.15674 4.68359C8.10986 4.51953 8.08643 4.26172 8.08643 3.91016C8.08643 2.94922 8.41455 2.14063 9.0708 1.48438C9.72705 0.828125 10.5356 0.5 11.4966 0.5C12.4575 0.5 13.2778 0.863281 13.9575 1.58984C14.6606 1.47266 15.3872 1.19141 16.1372 0.746094C15.9028 1.56641 15.3989 2.19922 14.6255 2.64453C15.3521 2.57422 16.0083 2.39844 16.5942 2.11719Z" />
+    </symbol>
+
+    <symbol viewBox="0 0 16 17" id="printerest">
+      <path
+        d="M2.28564 2.69531C3.83252 1.14844 5.6958 0.375 7.87549 0.375C10.0552 0.375 11.9067 1.14844 13.4302 2.69531C14.9771 4.21875 15.7505 6.07031 15.7505 8.25C15.7505 10.4297 14.9771 12.293 13.4302 13.8398C11.9067 15.3633 10.0552 16.125 7.87549 16.125C7.07861 16.125 6.32861 16.0195 5.62549 15.8086C6.04736 15.0586 6.31689 14.4961 6.43408 14.1211L6.99658 11.9414C7.34814 12.5977 7.98096 12.9258 8.89502 12.9258C10.1606 12.9258 11.1802 12.4219 11.9536 11.4141C12.7505 10.4062 13.1489 9.11719 13.1489 7.54688C13.1489 6.32812 12.6802 5.27344 11.7427 4.38281C10.8052 3.46875 9.60986 3.01172 8.15674 3.01172C6.42236 3.01172 5.05127 3.52734 4.04346 4.55859C3.03564 5.56641 2.53174 6.69141 2.53174 7.93359C2.53174 9.50391 3.0708 10.5117 4.14893 10.957C4.35986 11.0508 4.50049 10.9805 4.5708 10.7461C4.5708 10.6992 4.58252 10.5938 4.60596 10.4297C4.65283 10.2656 4.68799 10.1602 4.71143 10.1133C4.7583 9.97266 4.72314 9.83203 4.60596 9.69141C4.25439 9.26953 4.07861 8.75391 4.07861 8.14453C4.07861 7.11328 4.43018 6.23438 5.1333 5.50781C5.85986 4.75781 6.79736 4.38281 7.9458 4.38281C8.97705 4.38281 9.78564 4.66406 10.3716 5.22656C10.9575 5.76562 11.2505 6.48047 11.2505 7.37109C11.2505 8.54297 11.0161 9.53906 10.5474 10.3594C10.0786 11.1562 9.48096 11.5547 8.75439 11.5547C8.33252 11.5547 7.99268 11.4141 7.73486 11.1328C7.47705 10.8281 7.39502 10.4648 7.48877 10.043C7.53564 9.80859 7.61768 9.49219 7.73486 9.09375C7.87549 8.69531 7.98096 8.34375 8.05127 8.03906C8.14502 7.73438 8.19189 7.47656 8.19189 7.26562C8.19189 6.9375 8.09814 6.65625 7.91064 6.42188C7.72314 6.1875 7.46533 6.07031 7.13721 6.07031C6.71533 6.07031 6.35205 6.26953 6.04736 6.66797C5.76611 7.04297 5.62549 7.52344 5.62549 8.10938C5.62549 8.32031 5.64893 8.53125 5.6958 8.74219C5.74268 8.95312 5.78955 9.11719 5.83643 9.23438L5.87158 9.375C5.28564 11.8125 4.9458 13.2422 4.85205 13.6641C4.71143 14.2266 4.66455 14.8242 4.71143 15.457C3.30518 14.8242 2.16846 13.8633 1.30127 12.5742C0.434082 11.2852 0.000488281 9.84375 0.000488281 8.25C0.000488281 6.07031 0.762207 4.21875 2.28564 2.69531Z" />
+    </symbol>
+
+    <symbol viewBox="0 0 15 16" id="instagram">
+      <path
+        d="M13.5942 0.9375H1.40674C1.01611 0.9375 0.684082 1.07422 0.410645 1.34766C0.137207 1.62109 0.000488281 1.95313 0.000488281 2.34375V14.5312C0.000488281 14.9219 0.137207 15.2539 0.410645 15.5273C0.684082 15.8008 1.01611 15.9375 1.40674 15.9375H13.5942C13.9849 15.9375 14.3169 15.8008 14.5903 15.5273C14.8638 15.2539 15.0005 14.9219 15.0005 14.5312V2.34375C15.0005 1.95313 14.8638 1.62109 14.5903 1.34766C14.3169 1.07422 13.9849 0.9375 13.5942 0.9375ZM10.313 3.28125C10.313 3.1543 10.3569 3.04688 10.4448 2.95898C10.5425 2.86133 10.6548 2.8125 10.7817 2.8125H12.6567C12.7837 2.8125 12.8911 2.86133 12.979 2.95898C13.0767 3.04688 13.1255 3.1543 13.1255 3.28125V5.15625C13.1255 5.2832 13.0767 5.39551 12.979 5.49316C12.8911 5.58105 12.7837 5.625 12.6567 5.625H10.7817C10.6548 5.625 10.5425 5.58105 10.4448 5.49316C10.3569 5.39551 10.313 5.2832 10.313 5.15625V3.28125ZM7.50049 5.625C8.27197 5.625 8.93115 5.89844 9.47803 6.44531C10.0347 6.99219 10.313 7.65625 10.313 8.4375C10.313 9.20898 10.0396 9.87305 9.49268 10.4297C8.9458 10.9766 8.28174 11.25 7.50049 11.25C6.729 11.25 6.06494 10.9766 5.5083 10.4297C4.96143 9.88281 4.68799 9.21875 4.68799 8.4375C4.68799 7.66602 4.96143 7.00684 5.5083 6.45996C6.05518 5.90332 6.71924 5.625 7.50049 5.625ZM13.1255 13.5938C13.1255 13.7207 13.0767 13.833 12.979 13.9307C12.8911 14.0186 12.7837 14.0625 12.6567 14.0625H2.34424C2.21729 14.0625 2.10498 14.0186 2.00732 13.9307C1.91943 13.833 1.87549 13.7207 1.87549 13.5938V7.5H2.90088C2.87158 7.64648 2.84717 7.79785 2.82764 7.9541C2.81787 8.11035 2.81299 8.27148 2.81299 8.4375C2.81299 9.08203 2.93506 9.69238 3.1792 10.2686C3.42334 10.835 3.75537 11.333 4.17529 11.7627C4.60498 12.1826 5.10303 12.5146 5.66943 12.7588C6.24561 13.0029 6.85596 13.125 7.50049 13.125C8.14502 13.125 8.75049 13.0029 9.31689 12.7588C9.89307 12.5146 10.3911 12.1826 10.811 11.7627C11.2407 11.333 11.5776 10.835 11.8218 10.2686C12.0659 9.69238 12.188 9.08203 12.188 8.4375C12.188 8.28125 12.1782 8.125 12.1587 7.96875C12.1489 7.80273 12.1294 7.64648 12.1001 7.5H13.1255V13.5938Z" />
+    </symbol>
+
+    <symbol viewBox="0 0 18 14" id="youtube">
+      <path
+        d="M17.895 3.48828C17.9653 4.75391 18.0005 6.00781 18.0005 7.25C18.0005 8.49219 17.9653 9.74609 17.895 11.0117C17.895 11.8086 17.6372 12.4883 17.1216 13.0508C16.6294 13.5898 16.02 13.8594 15.2935 13.8594C13.4888 13.9531 11.3911 14 9.00049 14C6.60986 14 4.51221 13.9531 2.70752 13.8594C1.98096 13.8594 1.35986 13.5898 0.844238 13.0508C0.352051 12.4883 0.105957 11.8086 0.105957 11.0117C0.0356445 9.74609 0.000488281 8.49219 0.000488281 7.25C0.000488281 6.42969 0.0473633 5.17578 0.141113 3.48828C0.141113 2.69141 0.387207 2.02344 0.879395 1.48438C1.37158 0.921875 1.98096 0.640625 2.70752 0.640625C4.41846 0.546875 6.41064 0.5 8.68408 0.5H9.00049H9.31689C11.5903 0.5 13.5825 0.546875 15.2935 0.640625C16.02 0.640625 16.6294 0.921875 17.1216 1.48438C17.6372 2.02344 17.895 2.69141 17.895 3.48828ZM7.27783 10.6953L12.3755 7.25L7.27783 3.76953V10.6953Z" />
+    </symbol>
+
+    <symbol viewBox="0 0 24 24" id="heart">
+      <path
+        d="M11.928 4.86044C12.8966 2.5646 15.1094 0.960441 17.6832 0.960441C21.1502 0.960441 23.6472 3.92636 23.9611 7.46108C23.9611 7.46108 24.1306 8.33852 23.7576 9.9182C23.2498 12.0696 22.056 13.9809 20.4466 15.4396L11.928 23.04L3.55296 15.4392C1.94352 13.9809 0.749761 12.0691 0.241921 9.91772C-0.131039 8.33804 0.038401 7.4606 0.038401 7.4606C0.352321 3.92588 2.84928 0.959961 6.31632 0.959961C8.89056 0.959961 10.9594 2.5646 11.928 4.86044Z" />
+    </symbol>
+  </svg>
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <div class="page-header__contacts">
+        <ul class="page-header__contacts-list contacts-list">
+          <li class="contacts-list__item contacts-list__item--email">
+            <a aria-label="email" href="mailto:info@yourcommpany.com"
+              class="contacts-list__link" tabindex="0">info@yourcommpany.com</a>
+          </li>
+          <li class="contacts-list__item contacts-list__item--phone">
+            <a aria-label="telephone number" href="tel:+7000000000000" class="contacts-list__link">+7000000000000</a>
+          </li>
+        </ul>
+        <ul class="page-header__social-list social-list">
+          <li class="social-list__item">
+            <a aria-label="facebook" class="social-list__link social-list__link--facebook"
+              href="https://www.facebook.com/TemplatesJungle">
+              <svg class="social-list__icon" width="7" height="14" aria-label="facebook">
+                <use xlink:href="#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a aria-label="twitter" class="social-list__link social-list__link--twitter" href="#">
+              <svg class="social-list__icon" width="17" height="14" aria-label="twitter">
+                <use xlink:href="#twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a aria-label="printerest" class="social-list__link social-list__link--printerest" href="#">
+              <svg class="social-list__icon" width="16" height="17" aria-label="printerest">
+                <use xlink:href="#printerest"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a aria-label="instagram" class="social-list__link social-list__link--instagram"
+              href="https://www.instagram.com/templatesjungle.design">
+              <svg class="social-list__icon" width="15" height="16" aria-label="instagram" >
+                <use xlink:href="#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a aria-label="youtube" class="social-list__link social-list__link--youtube" href="#">
+              <svg class="social-list__icon" width="18" height="14" aria-label="youtube">
+                <use xlink:href="#youtube"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-header__menu">
+        <a class="page-header__logo" href="#" aria-label="Logotype, home page">TRAVELLO.</a>
+        <div class="page-header__burger">
+          <div class="page-header__bar page-header__bar--1"></div>
+          <div class="page-header__bar page-header__bar--2"></div>
+          <div class="page-header__bar page-header__bar--3"></div>
+        </div>
+        <div class="page-header__nav main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#" aria-label="home">
+                home
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#" aria-label="about">
+                about
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#" aria-label="blog">
+                blog
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#" aria-label="account">
+                account
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#" aria-label="login">
+                login
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <main class="page-main">
+    <h1 class="visually-hidden">The travel guide app</h1>
+    <section class="title">
+      <h2 class="visually-hidden">Travello</h2>
+      <div class="title__wrapper">
+        <p class="title__description">The travel guide app</p>
+        <p class="title__heading">Travello</p>
+      </div>
+    </section>
+    <section class="search">
+      <h2 class="visually-hidden">Search travel booking</h2>
+      <div class="search__wrapper">
+        <p class="search__description">Travel booking just a click away</p>
+        <form class="search__search-line">
+          <input aria-label="Enter country" type="text" class="search__input" placeholder="Where do you want go?"
+            required>
+          <button aria-label="Сountry search button" class="search__button" type="submit">
+            <svg aria-label="Сountry search button" class="search__button-icon" width="19" height="19">
+              <use xlink:href="#glass"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </section>
+    <section class="advantages">
+      <h2 class="visually-hidden">Application advantages</h2>
+      <ul class="advantages__list">
+        <li class="advantages__item">
+          <svg aria-label="house" class="search__button-icon" width="50" height="50">
+            <use xlink:href="#house"></use>
+          </svg>
+          <p class="advantages__title">100+ Options</p>
+          <p class="advantages__description">At in proin consequat ut cursus venenatis sapien.</p>
+        </li>
+        <li class="advantages__item">
+          <svg aria-label="fire" class="search__button-icon" width="50" height="62">
+            <use xlink:href="#fire"></use>
+          </svg>
+          <p class="advantages__title">Good quality</p>
+          <p class="advantages__description">At in proin consequat ut cursus venenatis sapien.</p>
+        </li>
+        <li class="advantages__item">
+          <svg aria-label="chat" class="search__button-icon" width="50" height="50">
+            <use xlink:href="#chat"></use>
+          </svg>
+          <p class="advantages__title">Easy interface</p>
+          <p class="advantages__description">At in proin consequat ut cursus venenatis sapien.</p>
+        </li>
+        <li class="advantages__item">
+          <svg aria-label="display" class="search__button-icon" width="50" height="50">
+            <use xlink:href="#display"></use>
+          </svg>
+          <p class="advantages__title">Tracking code</p>
+          <p class="advantages__description">At in proin consequat ut cursus venenatis sapien.</p>
+        </li>
+      </ul>
+    </section>
+    <section class="description">
+      <h2 class="visually-hidden">Description</h2>
+      <div class="description__wrapper">
+        <p class="description__slogan">Easily find awesome places to travel this year</p>
+        <p class="description__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing cursus
+          auctor eget sed phasellus senectus. Ut tellus donec vestibulum tristique leo bibendum in a, tincidunt.
+          Volutpat metus id amet, nam hac magna accumsan. Nascetur ac tortor purus ultrices morbi tellus. Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit. Est, adipiscing cursus auctor eget sed.</p>
+      </div>
+    </section>
+    <section class="gallery">
+      <h2 class="visually-hidden">Hotel gallery</h2>
+      <div class="gallery__wrapper">
+        <div class="gallery__countries">
+          <ul class="gallery__countries-list countries__list">
+            <li class="countries__item">
+              <button aria-label="Country switch button" type="button"
+                class="countries__button countries__button--active" data-id="singapore">Singapore</button>
+            </li>
+            <li class="countries__item">
+              <button class="countries__button" data-id="china" aria-label="Country switch button" type="button">China</button>
+            </li>
+            <li class="countries__item">
+              <button class="countries__button" data-id="india" aria-label="Country switch button" type="button">India</button>
+            </li>
+            <li class="countries__item">
+              <button class="countries__button" data-id="bhutan" aria-label="Country switch button" type="button">Bhutan</button>
+            </li>
+            <li class="countries__item">
+              <button class="countries__button" data-id="thailand" aria-label="Country switch button" type="button">Thailand</button>
+            </li>
+            <li class="countries__item">
+              <button class="countries__button" data-id="nepal" aria-label="Country switch button" type="button">Nepal</button>
+            </li>
+          </ul>
+        </div>
+        <div class="gallery__hotels hotels">
+          
+          <article class="hotels__item hotels__item--singapore">
+            <h3 class="visually-hidden">Hotel description</h3>
+            <div class="hotels__like">
+              <button tabindex="0" class="hotels__heart-icon" aria-label="Like">
+                <svg aria-label="Like" class="hotels__icon" width="24" height="24">
+                  <use xlink:href="#heart"></use>
+                </svg>
+              </button>
+            </div>
+            <img src="img/Hotel.png" alt="hotel" class="hotels__img">
+            <div class="hotels__info">
+              <h4 class="hotels__name">DoubleTree Montreal Hotel</h4>
+              <div class="hotels__rating">
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star"></span>
+                <span class="hotels__star"></span>
+              </div>
+              <div class="hotels__price">
+                <p class="hotels__old-price">$149</p>
+                <p class="hotels__new-price">$99</p>
+                <p class="hotels__price-text">/night</p>
+              </div>
+              <div class="hotels__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing
+                cursus
+                auctor eget sed phasellus senectus. Ut tellus donec vestibulum tristique leo bibendum in a, tincidunt.
+              </div>
+              <button aria-label="Select a hotel rooms" class="hotels__button">select rooms</button>
+            </div>
+          </article>
+          <article class="hotels__item hotels__item--singapore">
+            <h3 class="visually-hidden">Hotel description</h3>
+            <div class="hotels__like">
+              <button tabindex="0" class="hotels__heart-icon" aria-label="Like">
+                <svg aria-label="Like" class="hotels__icon" width="24" height="24">
+                  <use xlink:href="#heart"></use>
+                </svg>
+              </button>
+            </div>
+            <img src="img/Hotel1.png" alt="hotel" class="hotels__img">
+            <div class="hotels__info">
+              <h4 class="hotels__name">DoubleTree Montreal Hotel</h4>
+              <div class="hotels__rating">
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star"></span>
+                <span class="hotels__star"></span>
+              </div>
+              <div class="hotels__price">
+                <p class="hotels__old-price">$149</p>
+                <p class="hotels__new-price">$99</p>
+                <p class="hotels__price-text">/night</p>
+              </div>
+              <div class="hotels__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing
+                cursus
+                auctor eget sed phasellus senectus. Ut tellus donec vestibulum tristique leo bibendum in a, tincidunt.
+              </div>
+              <button aria-label="Select a hotel rooms" class="hotels__button">select rooms</button>
+            </div>
+          </article>
+          <article class="hotels__item hotels__item--singapore">
+            <h3 class="visually-hidden">Hotel description</h3>
+            <div class="hotels__like">
+              <button tabindex="0" class="hotels__heart-icon" aria-label="Like">
+                <svg aria-label="Like" class="hotels__icon" width="24" height="24">
+                  <use xlink:href="#heart"></use>
+                </svg>
+              </button>
+            </div>
+            <img src="img/Hotel2.png" alt="hotel" class="hotels__img">
+            <div class="hotels__info">
+              <h4 class="hotels__name">DoubleTree Montreal Hotel</h4>
+              <div class="hotels__rating">
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star"></span>
+                <span class="hotels__star"></span>
+              </div>
+              <div class="hotels__price">
+                <p class="hotels__old-price">$149</p>
+                <p class="hotels__new-price">$99</p>
+                <p class="hotels__price-text">/night</p>
+              </div>
+              <div class="hotels__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing
+                cursus
+                auctor eget sed phasellus senectus. Ut tellus donec vestibulum tristique leo bibendum in a, tincidunt.
+              </div>
+              <button aria-label="Select a hotel rooms" class="hotels__button">select rooms</button>
+            </div>
+          </article>
+          <article class="hotels__item hotels__item--singapore">
+            <h3 class="visually-hidden">Hotel description</h3>
+            <div class="hotels__like">
+              <button tabindex="0" type="button" class="hotels__heart-icon" aria-label="Like">
+                <svg aria-label="Like" class="hotels__icon" width="24" height="24">
+                  <use xlink:href="#heart"></use>
+                </svg>
+              </button>
+            </div>
+            <img src="img/Hotel3.png" alt="hotel" class="hotels__img">
+            <div class="hotels__info">
+              <h4 class="hotels__name">DoubleTree Montreal Hotel</h4>
+              <div class="hotels__rating">
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star"></span>
+                <span class="hotels__star"></span>
+              </div>
+              <div class="hotels__price">
+                <p class="hotels__old-price">$149</p>
+                <p class="hotels__new-price">$99</p>
+                <p class="hotels__price-text">/night</p>
+              </div>
+              <div class="hotels__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing
+                cursus
+                auctor eget sed phasellus senectus. Ut tellus donec vestibulum tristique leo bibendum in a, tincidunt.
+              </div>
+              <button aria-label="Select a hotel rooms" class="hotels__button">select rooms</button>
+            </div>
+          </article>
+          <article class="hotels__item hotels__item--china block-none">
+            <h3 class="visually-hidden">Hotel description</h3>
+            <div class="hotels__like">
+              <button tabindex="0" class="hotels__heart-icon" aria-label="Like">
+                <svg aria-label="Like" class="hotels__icon" width="24" height="24">
+                  <use xlink:href="#heart"></use>
+                </svg>
+              </button>
+            </div>
+            <img src="img/Hotel.png" alt="hotel" class="hotels__img">
+            <div class="hotels__info">
+              <h4 class="hotels__name">DoubleTree Montreal Hotel</h4>
+              <div class="hotels__rating">
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star"></span>
+                <span class="hotels__star"></span>
+              </div>
+              <div class="hotels__price">
+                <p class="hotels__old-price">$149</p>
+                <p class="hotels__new-price">$99</p>
+                <p class="hotels__price-text">/night</p>
+              </div>
+              <div class="hotels__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing
+                cursus
+                auctor eget sed phasellus senectus. Ut tellus donec vestibulum tristique leo bibendum in a, tincidunt.
+              </div>
+              <button aria-label="Select a hotel rooms" class="hotels__button">select rooms</button>
+            </div>
+          </article>
+
+          <article class="hotels__item hotels__item--india block-none">
+            <h3 class="visually-hidden">Hotel description</h3>
+            <div class="hotels__like">
+              <button tabindex="0" type="button" class="hotels__heart-icon" aria-label="Like">
+                <svg aria-label="Like" class="hotels__icon" width="24" height="24">
+                  <use xlink:href="#heart"></use>
+                </svg>
+              </button>
+            </div>
+            <img src="img/Hotel.png" alt="hotel" class="hotels__img">
+            <div class="hotels__info">
+              <h4 class="hotels__name">DoubleTree Montreal Hotel</h4>
+              <div class="hotels__rating">
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star"></span>
+                <span class="hotels__star"></span>
+              </div>
+              <div class="hotels__price">
+                <p class="hotels__old-price">$149</p>
+                <p class="hotels__new-price">$99</p>
+                <p class="hotels__price-text">/night</p>
+              </div>
+              <div class="hotels__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing
+                cursus
+                auctor eget sed phasellus senectus. Ut tellus donec vestibulum tristique leo bibendum in a, tincidunt.
+              </div>
+              <button aria-label="Select a hotel rooms" class="hotels__button">select rooms</button>
+            </div>
+          </article>
+          <article class="hotels__item hotels__item--india block-none">
+            <h3 class="visually-hidden">Hotel description</h3>
+            <div class="hotels__like">
+              <button tabindex="0" type="button" class="hotels__heart-icon" aria-label="Like">
+                <svg aria-label="Like" class="hotels__icon" width="24" height="24">
+                  <use xlink:href="#heart"></use>
+                </svg>
+              </button>
+            </div>
+            <img src="img/Hotel2.png" alt="hotel" class="hotels__img">
+            <div class="hotels__info">
+              <h4 class="hotels__name">DoubleTree Montreal Hotel</h4>
+              <div class="hotels__rating">
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star"></span>
+                <span class="hotels__star"></span>
+              </div>
+              <div class="hotels__price">
+                <p class="hotels__old-price">$149</p>
+                <p class="hotels__new-price">$99</p>
+                <p class="hotels__price-text">/night</p>
+              </div>
+              <div class="hotels__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing
+                cursus
+                auctor eget sed phasellus senectus. Ut tellus donec vestibulum tristique leo bibendum in a, tincidunt.
+              </div>
+              <button aria-label="Select a hotel rooms" class="hotels__button">select rooms</button>
+            </div>
+          </article>
+          <article class="hotels__item hotels__item--bhutan block-none">
+            <h3 class="visually-hidden">Hotel description</h3>
+            <div class="hotels__like">
+              <button tabindex="0" type="button" class="hotels__heart-icon" aria-label="Like">
+                <svg aria-label="Like" class="hotels__icon" width="24" height="24">
+                  <use xlink:href="#heart"></use>
+                </svg>
+              </button>
+            </div>
+            <img src="img/Hotel3.png" alt="hotel" class="hotels__img">
+            <div class="hotels__info">
+              <h4 class="hotels__name">DoubleTree Montreal Hotel</h4>
+              <div class="hotels__rating">
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star"></span>
+                <span class="hotels__star"></span>
+              </div>
+              <div class="hotels__price">
+                <p class="hotels__old-price">$149</p>
+                <p class="hotels__new-price">$99</p>
+                <p class="hotels__price-text">/night</p>
+              </div>
+              <div class="hotels__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing
+                cursus
+                auctor eget sed phasellus senectus. Ut tellus donec vestibulum tristique leo bibendum in a, tincidunt.
+              </div>
+              <button aria-label="Select a hotel rooms" class="hotels__button">select rooms</button>
+            </div>
+          </article>
+          <article class="hotels__item hotels__item--nepal block-none">
+            <h3 class="visually-hidden">Hotel description</h3>
+            <div class="hotels__like">
+              <button tabindex="0" type="button" class="hotels__heart-icon" aria-label="Like">
+                <svg aria-label="Like" class="hotels__icon" width="24" height="24">
+                  <use xlink:href="#heart"></use>
+                </svg>
+              </button>
+            </div>
+            <img src="img/Hotel1.png" alt="hotel" class="hotels__img">
+            <div class="hotels__info">
+              <h4 class="hotels__name">DoubleTree Montreal Hotel</h4>
+              <div class="hotels__rating">
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star"></span>
+                <span class="hotels__star"></span>
+              </div>
+              <div class="hotels__price">
+                <p class="hotels__old-price">$149</p>
+                <p class="hotels__new-price">$99</p>
+                <p class="hotels__price-text">/night</p>
+              </div>
+              <div class="hotels__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing
+                cursus
+                auctor eget sed phasellus senectus. Ut tellus donec vestibulum tristique leo bibendum in a, tincidunt.
+              </div>
+              <button aria-label="Select a hotel rooms" class="hotels__button">select rooms</button>
+            </div>
+          </article>
+          <article class="hotels__item hotels__item-- block-none">
+            <h3 class="visually-hidden">Hotel description</h3>
+            <div class="hotels__like">
+              <button tabindex="0" type="button" class="hotels__heart-icon" aria-label="Like">
+                <svg aria-label="Like" class="hotels__icon" width="24" height="24">
+                  <use xlink:href="#heart"></use>
+                </svg>
+              </button>
+            </div>
+            <img src="img/Hotel3.png" alt="hotel" class="hotels__img">
+            <div class="hotels__info">
+              <h4 class="hotels__name">DoubleTree Montreal Hotel</h4>
+              <div class="hotels__rating">
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star hotels__star--active"></span>
+                <span class="hotels__star"></span>
+                <span class="hotels__star"></span>
+              </div>
+              <div class="hotels__price">
+                <p class="hotels__old-price">$149</p>
+                <p class="hotels__new-price">$99</p>
+                <p class="hotels__price-text">/night</p>
+              </div>
+              <div class="hotels__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing
+                cursus
+                auctor eget sed phasellus senectus. Ut tellus donec vestibulum tristique leo bibendum in a, tincidunt.
+              </div>
+              <button aria-label="Select a hotel rooms" class="hotels__button">select rooms</button>
+            </div>
+          </article>
+        </div>
+        <div class="gallery__nothing-found visually-hidden">
+          <p>Nothing found</p>
+        </div>
+        <div class="gallery__view-all">
+          <button class="gallery__button" aria-label="Show all hotels">view all</button>
+        </div>
+        <div class="gallery__up visually-hidden">
+          <button class="gallery__button" aria-label="Show all hotels">up</button>
+        </div>
+      </div>
+    </section>
+    <section class="testimonials">
+      <h2 class="visually-hidden">Testimonials</h2>
+      <div class="testimonials__wrapper">
+        <div class="testimonials__slider testimonials__slider--active">
+          <p class="testimonials__text">Richard is so good at what he does. Excellent communicatuon skills made things
+            much simple and faster. Will continue working with him.</p>
+          <div class="testimonials__author">
+            <p class="testimonials__author-name">Dr. Steve Watson, &nbsp</p>
+            <p class="testimonials__author-company">Greenland Studio in.</p>
+          </div>
+        </div>
+        <div class="testimonials__slider">
+          <p class="testimonials__text">Leo is so good at what he does. Excellent communicatuon skills made things
+            much simple and faster. Will continue working with him.</p>
+          <div class="testimonials__author">
+            <p class="testimonials__author-name">Marina</p>
+            <p class="testimonials__author-company">Bueno Studio in.</p>
+          </div>
+        </div>
+
+        <div class="testimonials__slider">
+          <p class="testimonials__text">John is so good at what he does. Excellent communicatuon skills made things
+            much simple and faster. Will continue working with him.</p>
+          <div class="testimonials__author">
+            <p class="testimonials__author-name">Dr. Alex Stewart,</p>
+            <p class="testimonials__author-company">Sun Studio in.</p>
+          </div>
+        </div>
+
+        <div class="testimonials__control">
+          <button class="testimonials__button testimonials__button--first testimonials__button--active" type="button"
+            aria-label="First slide"></button>
+          <button class="testimonials__button testimonials__button--second" type="button" aria-label="Second slide"></button>
+          <button class="testimonials__button testimonials__button--third" type="button" aria-label="Third slide"></button>
+        </div>
+      </div>
+    </section>
+    <section class="possibility">
+      <h2 class="visually-hidden">Possibility</h2>
+      <div class="possibility__wrapper">
+        <div class="possibility__container possibility__container--first">
+          <img src="img/plane-and-money.png" alt="plane and money" class="possibility__img">
+          <div class="possibility__title">Book your tickets at the comfort of your phone</div>
+          <p class="possibility__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing
+            cursus
+            auctor eget sed phasellus senectus. Ut tellus donec vestibulum tristique leo bibendum in a, tincidunt.</p>
+        </div>
+        <div class="possibility__container possibility__container--second">
+          <img src="img/cabin-baggage.png" alt="cabin baggage" class="possibility__img  possibility__img--second">
+          <div class="possibility__title">Easily Find awesome places to travel this year</div>
+          <p class="possibility__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing
+            cursus
+            auctor eget sed phasellus senectus. Ut tellus donec vestibulum tristique leo bibendum in a, tincidunt.</p>
+        </div>
+      </div>
+    </section>
+    <section class="tariffs">
+      <h2 class="visually-hidden">Tariffs</h2>
+      <div class="tariffs__wrapper">
+        <ul class="tariffs__list tariff">
+          <li class="tariff__item">
+            <div class="tariff__price">
+              <p class="tariff__cost">$39</p>
+              <p class="tariff__month">/month</p>
+            </div>
+            <div class="tariff__name">Personal</div>
+            <div class="tariff__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit.</div>
+            <ul class="tariff__options">
+              <li class="tariff__option">Secure your customer usage</li>
+              <li class="tariff__option">View basic analytics</li>
+              <li class="tariff__option">Up to 350 customer profile</li>
+              <li class="tariff__option">Custom network name</li>
+            </ul>
+            <div class="tariff__button-wrapper">
+              <button aria-label="Tariff selection button" class="teriff__button">Your current plan</button>
+            </div>
+          </li>
+
+          <li class="tariff__item">
+            <div class="tariff__price">
+              <p class="tariff__cost">$55</p>
+              <p class="tariff__month">/month</p>
+            </div>
+            <div class="tariff__name">Bussines</div>
+            <div class="tariff__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit.</div>
+            <ul class="tariff__options">
+              <li class="tariff__option">Secure your customer usage</li>
+              <li class="tariff__option">View basic analytics</li>
+              <li class="tariff__option">Up to 350 customer profile</li>
+              <li class="tariff__option">Custom network name</li>
+            </ul>
+            <div class="tariff__button-wrapper">
+              <button aria-label="Tariff selection button" class="teriff__button">Upgrade to Social</button>
+            </div>
+          </li>
+
+          <li class="tariff__item">
+            <div class="tariff__price">
+              <p class="tariff__cost">$99</p>
+              <p class="tariff__month">/month</p>
+            </div>
+            <div class="tariff__name">Agency</div>
+            <div class="tariff__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit.</div>
+            <ul class="tariff__options">
+              <li class="tariff__option">Secure your customer usage</li>
+              <li class="tariff__option">View basic analytics</li>
+              <li class="tariff__option">Up to 350 customer profile</li>
+              <li class="tariff__option">Custom network name</li>
+            </ul>
+            <div class="tariff__button-wrapper">
+              <button aria-label="Tariff selection button" class="teriff__button">Upgrade to Marketing</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="contacts">
+      <h2 class="visually-hidden">
+        Contacts
+      </h2>
+      <div class="contacts__wrapper">
+        <div class="contacts__name">Travello.</div>
+        <div class="contacts__email"><a aria-label="email" href="mailto:hello@jungle.com"
+            class="contacts__link">hello@templatesjungle.com</a></div>
+        <div class="contacts__adress">15Th Street Avenue, New York, USA</div>
+        <ul class="contacts__social social-list">
+          <li class="social-list__item">
+            <a aria-label="facebook" class="social-list__link social-list__link--facebook"
+            href="https://www.facebook.com/TemplatesJungle">
+              <svg aria-label="facebook" class="social-list__icon" width="7" height="14">
+                <use xlink:href="#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a aria-label="twitter" class="social-list__link social-list__link--twitter" href="#">
+              <svg aria-label="twitter" class="social-list__icon" width="17" height="14">
+                <use xlink:href="#twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a aria-label="printerest" class="social-list__link social-list__link--printerest" href="#">
+              <svg aria-label="printerest" class="social-list__icon" width="16" height="17">
+                <use xlink:href="#printerest"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a aria-label="instagram" class="social-list__link social-list__link--instagram" 
+            href="https://www.instagram.com/templatesjungle.design">
+              <svg aria-label="instagram" class="social-list__icon" width="15" height="16">
+                <use xlink:href="#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a aria-label="youtube" class="social-list__link social-list__link--youtube" href="#">
+              <svg aria-label="youtube" class="social-list__icon" width="18" height="14">
+                <use xlink:href="#youtube"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__copyright">
+
+      <p class="page-footer__copyright-text">&#169 2022 Templatesjungle. All rights reserved.</p>
+      <p class="page-footer__copyright-text">Design by <b>Templatesjungle</b></p>
+
+    </div>
+  </footer>
+  <script src="js/app.min.js"></script>
+</body>
