@@ -7,14 +7,15 @@ const nothingFound = document.querySelector('.gallery__nothing-found');
 
 const filter = () => {
     countriesList.addEventListener('click', (event) => {
+
         const targetId = event.target.dataset.id;
         const target = event.target;
 
         buttons.forEach(item => {
             item.classList.remove('countries__button--active');
         });
-        target.classList.add('countries__button--active');
 
+        target.classList.add('countries__button--active');
 
         switch (targetId) {
             case 'singapore':
@@ -47,25 +48,26 @@ const filter = () => {
     });
 
     viewAll.addEventListener('click', () => {
+
         hotels.forEach(item => {
             item.classList.remove('block-none');
             item.classList.add('block');
 
         });
+
         buttons.forEach(item => {
             item.classList.remove('countries__button--active');
         });
+
         viewAll.classList.add('visually-hidden');
         up.classList.remove('visually-hidden');
         nothingFound.classList.add('visually-hidden');
         countriesList.scrollIntoView();
     });
 
-
     up.addEventListener('click', () => {
         countriesList.scrollIntoView();
     });
-
 };
 
 filter();
@@ -83,13 +85,9 @@ const getItems = (className) => {
     });
 
     let hotelsArray = Array.from(hotels);
-    console.log(hotelsArray);
-    console.log(hotelsArray.find(el => el.classList.contains('block')));
     if (hotelsArray.find(el => el.classList.contains('block')) == undefined) {
         nothingFound.classList.remove('visually-hidden');
     } else {
         nothingFound.classList.add('visually-hidden');
     }
-
-
 };
