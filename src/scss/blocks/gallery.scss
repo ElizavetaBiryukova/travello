@@ -9,6 +9,10 @@
     margin: auto;
 }
 
+.gallery__up {
+    margin: auto;
+}
+
 .gallery__button {
     font-family: "Roboto";
     font-size: 15px;
@@ -26,4 +30,8 @@
 .gallery__button:focus,
 .gallery__button:hover {
     opacity: .7;
+}
+
+.gallery__nothing-found {
+    margin: -30px 0px 20px 0px;
 }
