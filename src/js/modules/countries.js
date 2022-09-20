@@ -15,7 +15,9 @@ const filter = () => {
             item.classList.remove('countries__button--active');
         });
 
-        target.classList.add('countries__button--active');
+        if (target.classList.contains('countries__button')) {
+            target.classList.add('countries__button--active');
+        }
 
         switch (targetId) {
             case 'singapore':
@@ -44,8 +46,9 @@ const filter = () => {
         }
 
         viewAll.classList.remove('visually-hidden');
-        up.classList.ad('visually-hidden');
+        up.classList.add('visually-hidden');
     });
+
 
     viewAll.addEventListener('click', () => {
 

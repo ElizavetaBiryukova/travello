@@ -4,8 +4,10 @@
   "private": true,
   "description": "Личный проект\r Категория: Landing Page\r Интерактивные элементы:\r",
   "main": "gupfile.js",
+  "homepage": "https://elizavetabiryukova.github.io/travello/",
   "type": "module",
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "dev": "gulp",
     "build": "gulp build --build",
     "svgSprive": "gulp svgSprive"
@@ -14,6 +16,7 @@
     "browser-sync": "^2.27.10",
     "del": "^6.1.1",
     "fs": "^0.0.1-security",
+    "gh-pages": "^4.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
