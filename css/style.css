@@ -157,7 +157,6 @@
   color: #ffffff;
 }
 
-.page-header__logo:focus,
 .page-header__logo:hover {
   color: #000000;
 }
@@ -1059,7 +1058,7 @@
   z-index: 10;
   padding: 90px 30px;
   background-color: #000000;
-  background-image: url(../../img/footer-bg.png);
+  background-image: url(../img/footer-bg.png);
   background-position: center;
   margin: 0px;
   text-align: center;
@@ -1085,7 +1084,6 @@
   line-height: 20px;
 }
 
-.main-nav__link:focus,
 .main-nav__link:hover {
   color: #000000;
 }
