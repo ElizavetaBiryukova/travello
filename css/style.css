@@ -125,7 +125,7 @@
   font-size: 14px;
   background-color: rgb(9, 19, 27);
   font-weight: 400;
-  background: url("../../img/Rectangle 3.png") center top no-repeat, rgb(9, 19, 27);
+  background: url("../img/Rectangle.png") center top no-repeat, rgb(9, 19, 27);
   background-size: cover;
 }
 
@@ -631,7 +631,7 @@
 
 .testimonials__wrapper {
   padding-top: 70px;
-  background-image: url(../../img/commas.svg);
+  background-image: url(../img/commas.svg);
   background-repeat: no-repeat;
   background-position: center top;
   padding-bottom: 40px;
@@ -798,7 +798,7 @@
   list-style-type: none;
   padding-left: 0px;
   padding-bottom: 100px;
-  background: url("../../img/footer-bg.png") center bottom no-repeat;
+  background: url("../img/footer-bg.png") center bottom no-repeat;
 }
 
 .tariff {
@@ -883,7 +883,7 @@
 .tariff__option::before {
   content: "";
   position: absolute;
-  background: no-repeat, url(../../img/check.svg);
+  background: no-repeat, url(../img/check.svg);
   width: 18px;
   height: 15px;
   right: 230px;
@@ -1018,7 +1018,7 @@
   .contacts-list__item--email::before {
     position: absolute;
     content: "";
-    background: url(../../img/envelope.svg);
+    background: url(../img/envelope.svg);
     width: 24px;
     height: 24px;
     top: 0px;
@@ -1027,7 +1027,7 @@
   .contacts-list__item--phone::before {
     position: absolute;
     content: "";
-    background: url(../../img/headphones.svg);
+    background: url(../img/headphones.svg);
     width: 24px;
     height: 24px;
     top: 0px;
