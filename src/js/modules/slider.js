@@ -6,6 +6,7 @@ const toggles = document.querySelectorAll('.testimonials__button');
 const togglesArray = Array.from(toggles);
 
 let index = 0;
+let timer;
 
 const changeButton = (el) => {
     togglesArray.forEach(item => {
@@ -26,34 +27,21 @@ togglesArray.forEach((el) => {
         const index = togglesArray.indexOf(event.target);
         changeButton(el);
         changeSlider(index);
+        clearTimeout(timer);
     });
+
 });
 
 
-
 const timeChange = () => {
-    for (index = 0; index < togglesArray.length; index++) {
-
-        changeButton(togglesArray[index]);
-        changeSlider(index);
+    index++;
+    if (index > togglesArray.length - 1) {
+        index = 0;
     }
+    changeButton(togglesArray[index]);
+    changeSlider(index);
+    timer = setTimeout(timeChange, 4000);
 };
 
-// timeChange();
-// const timeChange = () => {
-//     for (let i = 0; i < togglesArray.length - 1; i++) {
-//         // console.log(index++);
-//         changeButton(togglesArray[index]);
-//         changeSlider(index);
-//         index++;
-//     }
-//     // console.log(index);
 
-// };
-
-// // if ()
-
-// console.log(timeChange());
-// // console.log(togglesArray[2]);
-setTimeout(timeChange, 2000);
-// setInterval(timeChange, 2000);
+timeChange();
